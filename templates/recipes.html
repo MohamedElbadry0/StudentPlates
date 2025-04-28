@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodie | recipes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}" />
+  <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <header class="navbar">
+    <a href="/" class="logo">
+      <img src="{{ url_for('static', filename='pics/logo.png') }}" alt="Foodie Logo" />
+    </a>
+        <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/recipes">Recipes</a>
+      <a href="/diets">Diets</a>
+      <a href="/about">About Us</a>
+      <a href="/faqs">FAQs</a>
+    </nav>
+    <div class="menu-toggle" id="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+</header>
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">Craving Something New?</h1>
+    <p class="hero-subtitle">
+      Explore recipes made for students, by students – simple, easy, and affordable.
+    </p>
+    <div class="hero-buttons">
+      <button class="btn-primary" onclick="scrollToRecipes()">🍜 Browse All Recipes</button>
+      <input type="text" class="hero-search" placeholder="🔍 Search recipes...">
+    </div>
+  </div>
+</section>
+
+<!-- Page Headline -->
+<section class="recipes-headline">
+    <h1 class="animate-fade-in">Explore our Fast and Delicious recipes</h1>
+  </section>
+
+ <div class="diet-category easy-recipes-cards-section">
+<div class="cards-wrapper">
+<div class="recipe-card">
+            <img src="/static/pics/cheese.jpg" alt=" Recipe">
+            <a href="https://www.youtube.com/shorts/Lh_mIMV2xQQ" target="_blank" class="yt-watch-btn">
+              <i class="fa-brands fa-youtube"></i> Watch Recipe on YouTube
+            </a>
+            <h3>🥪 Philly Cheesesteak</h3>
+<p class="preview">⏱️ Time: 15–20 mins</p>
+
+<div class="extra-content">
+  <p><strong>Prep the Beef:</strong></p>
+  <p>Thinly slice 200g ribeye or sirloin steak. Season with salt & pepper.</p>
+  <p><em>Calories:</em> 330 kcal | <em>Cost:</em> ~£2.60 (200g Tesco ribeye)</p>
+
+  <p><strong>Cook the Veggies:</strong></p>
+  <p>Slice 1/2 onion and 1/2 green bell pepper. Sauté in olive oil until soft and caramelized.</p>
+  <p><em>Calories:</em> 70 kcal | <em>Cost:</em> ~£0.45</p>
+
+  <p><strong>Cook the Beef:</strong></p>
+  <p>Add sliced beef to the pan. Cook for 2–3 mins until just browned and tender.</p>
+  <p><em>Calories:</em> Included above | <em>Cost:</em> —</p>
+
+  <p><strong>Add Cheese:</strong></p>
+  <p>Add 1–2 slices of provolone or mozzarella (or use a dairy-free version).</p>
+  <p><em>Calories:</em> 140 kcal | <em>Cost:</em> ~£0.55 (2 slices)</p>
+
+  <p><strong>Assemble the Sandwich:</strong></p>
+  <p>Slice open a sub roll or baguette (~80g), lightly toast, and fill with the steak, melted cheese, and veggies.</p>
+  <p><em>Calories:</em> ~230 kcal (roll) | <em>Cost:</em> ~£0.50</p>
+
+  <p><strong>Optional Toppings:</strong></p>
+  <p>Hot sauce or mustard <em>•</em> ~5 kcal <em>•</em> ~£0.05</p>
+  <p>Pickles or jalapeños <em>•</em> ~10 kcal <em>•</em> ~£0.10</p>
+
+  <hr>
+
+  <p><strong>🔢 Total Estimated Calories:</strong> ~785–800 kcal</p>
+  <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£4.25</strong></p>
+            </div>
+            <button class="toggle-btn">Read Full Recipe</button>
+          </div>
+
+          <div class="recipe-card">
+            <img src="/static/pics/france.jpg" alt="french Recipe">
+            <a href="https://www.youtube.com/shorts/Aj0M_uKsIhU" target="_blank" class="yt-watch-btn">
+              <i class="fa-brands fa-youtube"></i> Watch Recipe on YouTube
+            </a>
+<h3>🥪 Croque Monsieur</h3>
+<p class="preview">⏱️ Time: 15 mins</p>
+
+<div class="extra-content">
+  <p><strong>Make the Béchamel Sauce:</strong></p>
+  <p>In a pan, melt 1 tbsp butter. Whisk in 1 tbsp plain flour. Slowly pour in 150ml milk while whisking. Simmer 2–3 mins until thickened.</p>
+  <p>Season with salt, pepper, and a pinch of nutmeg.</p>
+  <p><em>Calories:</em> ~110 kcal | <em>Cost:</em> ~£0.35</p>
+
+  <p><strong>Assemble the Sandwich:</strong></p>
+  <p>Butter 2 slices of white or sourdough bread. Spread béchamel on the inside of one slice.</p>
+  <p>Add 2 slices of cooked ham and 2 slices of Gruyère or Emmental cheese.</p>
+  <p><em>Calories:</em> ~410 kcal | <em>Cost:</em> ~£2.00 (ham + cheese + bread)</p>
+
+  <p><strong>Grill It:</strong></p>
+  <p>Close the sandwich, top with more béchamel and extra grated cheese. Grill or toast in a hot pan or under a grill until golden and melty.</p>
+  <p><em>Calories:</em> ~150 kcal (extra cheese & toasting) | <em>Cost:</em> ~£0.60</p>
+
+  <p><strong>Optional:</strong></p>
+  <p>Add a fried or poached egg on top to make it a Croque Madame (+90 kcal | ~£0.30)</p>
+
+  <hr>
+
+  <p><strong>🔢 Total Estimated Calories:</strong> ~670–700 kcal</p>
+  <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£2.95</strong></p>
+            </div>
+            <button class="toggle-btn">Read Full Recipe</button>
+          </div>
+          <div class="recipe-card">
+            <img src="/static/pics/katsu.jpg" alt="katsu">
+            <a href="https://www.youtube.com/shorts/1OX5mraSOY8" target="_blank" class="yt-watch-btn">
+              <i class="fa-brands fa-youtube"></i> Watch Recipe on YouTube
+            </a>
+            <h3>🍗 Chicken Katsu Sando</h3>
+            <p class="preview">⏱️ Time: 25–30 mins</p>
+
+<div class="extra-content">
+  <p><strong>Prepare the Chicken:</strong></p>
+  <p>Flatten 1 boneless chicken thigh or small breast (100–120g). Season with salt and pepper.</p>
+  <p>Coat in flour, dip in beaten egg, and press into panko breadcrumbs.</p>
+  <p><em>Calories:</em> ~250 kcal | <em>Cost:</em> ~£1.30</p>
+
+  <p><strong>Fry the Chicken:</strong></p>
+  <p>Shallow-fry in vegetable oil for 3–4 mins per side until golden and cooked through.</p>
+  <p>Drain on kitchen paper.</p>
+  <p><em>Calories:</em> ~90 kcal (from oil absorbed) | <em>Cost:</em> ~£0.25</p>
+
+  <p><strong>Make the Sauce:</strong></p>
+  <p>Mix 2 tbsp mayo + 1 tbsp tonkatsu or brown sauce + a pinch of mustard or Worcestershire sauce.</p>
+  <p><em>Calories:</em> ~80 kcal | <em>Cost:</em> ~£0.30</p>
+
+  <p><strong>Toast the Bread:</strong></p>
+  <p>Lightly toast 2 slices of soft white bread or milk bread.</p>
+  <p>Spread sauce on both sides.</p>
+  <p><em>Calories:</em> ~220 kcal | <em>Cost:</em> ~£0.40</p>
+
+  <p><strong>Assemble:</strong></p>
+  <p>Place shredded cabbage on one slice, then the katsu, more sauce, and the top slice. Press gently and cut in half.</p>
+  <p><em>Calories:</em> ~20 kcal (cabbage & garnish) | <em>Cost:</em> ~£0.10</p>
+
+  <hr>
+
+  <p><strong>🔢 Total Estimated Calories:</strong> ~660–680 kcal</p>
+  <p><strong>💷 Total Estimated Cost (per sandwich):</strong> ~<strong>£2.35</strong></p>
+            </div>
+            <button class="toggle-btn">Read Full Recipe</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+
+<div class="diet-category easy-recipes-cards-section">
+<div class="cards-wrapper">
+<div class="recipe-card">
+      <img src="/static/pics/burrata.png" alt="burrata Recipe">
+      <a href="https://www.youtube.com/shorts/JC8zQc7FW-0" target="_blank" class="yt-watch-btn">
+        <i class="fa-brands fa-youtube"></i> Watch Recipe on YouTube
+      </a>
+      <h3>🧀 Burrata Baguette with Pesto & Tomatoes</h3>
+<p class="preview">⏱️ Time: 5 mins</p>
+
+<div class="extra-content">
+  <p><strong>Toast the Bread:</strong></p>
+  <p>Slice a small baguette in half lengthwise. Toast under a grill or in a pan until golden and crisp.</p>
+  <p><em>Calories:</em> ~220 kcal | <em>Cost:</em> ~£0.50</p>
+
+  <p><strong>Spread the Pesto:</strong></p>
+  <p>Spread 1–2 tbsp of green pesto on each side of the toasted bread.</p>
+  <p><em>Calories:</em> ~140 kcal | <em>Cost:</em> ~£0.40</p>
+
+  <p><strong>Add Tomatoes:</strong></p>
+  <p>Slice 4–5 cherry tomatoes and layer them over the pesto. Add a pinch of salt & pepper.</p>
+  <p><em>Calories:</em> ~20 kcal | <em>Cost:</em> ~£0.30</p>
+
+  <p><strong>Add Burrata:</strong></p>
+  <p>Carefully break open 1 small burrata ball and spread/pull apart across both halves of the bread.</p>
+  <p><em>Calories:</em> ~300 kcal | <em>Cost:</em> ~£1.85 (Waitrose/Tesco burrata)</p>
+
+  <p><strong>Finish & Serve:</strong></p>
+  <p>Drizzle a little olive oil and balsamic glaze. Garnish with fresh basil or rocket if available.</p>
+  <p><em>Calories:</em> ~40 kcal | <em>Cost:</em> ~£0.25</p>
+
+  <hr>
+
+  <p><strong>🔢 Total Estimated Calories:</strong> ~720–750 kcal</p>
+  <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£3.30</strong></p>
+      </div>
+      <button class="toggle-btn">Read Full Recipe</button>
+    </div>
+
+    <div class="recipe-card">
+      <img src="/static/pics/mushroom.jpg" alt="mushroom Recipe">
+      <a href="https://www.youtube.com/shorts/kIhONRZ5llk" target="_blank" class="yt-watch-btn">
+        <i class="fa-brands fa-youtube"></i> Watch Recipe on YouTube
+      </a>
+      <h3>🍄 Creamy Mushroom Parmesan Pasta</h3>
+      <p class="preview">⏱️ Time: 20-30 mins</p>
+
+<div class="extra-content">
+  <p><strong>Cook the Pasta:</strong></p>
+  <p>Boil 160g pasta (spaghetti, tagliatelle or penne) in salted water until al dente. Reserve 1/4 cup pasta water before draining.</p>
+  <p><em>Calories:</em> ~280 kcal | <em>Cost:</em> ~£0.30</p>
+
+  <p><strong>Sauté the Mushrooms:</strong></p>
+  <p>Heat 1 tbsp olive oil and 1 tbsp butter in a pan. Add 200g sliced mushrooms (chestnut or button). Cook until golden and softened.</p>
+  <p>Add 2–3 minced garlic cloves and cook for 1 min more.</p>
+  <p><em>Calories:</em> ~180 kcal | <em>Cost:</em> ~£1.10</p>
+
+  <p><strong>Add Parmesan & Pasta Water:</strong></p>
+  <p>Add 40g freshly grated Parmesan and a splash of reserved pasta water. Stir until a silky sauce forms. Season with black pepper.</p>
+  <p><em>Calories:</em> ~170 kcal | <em>Cost:</em> ~£0.80</p>
+
+  <p><strong>Combine & Serve:</strong></p>
+  <p>Add drained pasta to the pan. Toss to coat everything evenly. Garnish with extra Parmesan, parsley, or chili flakes if desired.</p>
+  <p><em>Calories:</em> ~30 kcal (garnish/extra cheese) | <em>Cost:</em> ~£0.15</p>
+
+  <hr>
+
+  <p><strong>🔢 Total Estimated Calories:</strong> ~660 kcal (per serving)</p>
+  <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£2.35</strong></p>
+      </div>
+      <button class="toggle-btn">Read Full Recipe</button>
+    </div>
+    <div class="recipe-card">
+      <img src="/static/pics/steak.jpg" alt="steak">
+      <a href="https://www.youtube.com/shorts/46Igpi0UdEo" target="_blank" class="yt-watch-btn">
+        <i class="fa-brands fa-youtube"></i> Watch Recipe on YouTube
+      </a>
+      <h3>🥩 Salt & Pepper Basted Steak</h3>
+      <p class="preview">⏱️ Time: 10-12 mins</p>
+
+<div class="extra-content">
+  <p><strong>Prep the Steak:</strong></p>
+  <p>Take a 200–250g sirloin or ribeye steak out of the fridge 20 mins before cooking. Pat dry with paper towels.</p>
+  <p>Season both sides generously with salt and freshly ground black pepper.</p>
+  <p><em>Calories:</em> ~450 kcal | <em>Cost:</em> ~£3.80 (Tesco sirloin)</p>
+
+  <p><strong>Sear the Steak:</strong></p>
+  <p>Heat a heavy skillet or cast-iron pan over high heat until smoking hot.</p>
+  <p>Add 1 tsp vegetable oil and place the steak in. Sear for 2–3 mins per side (for medium-rare).</p>
+  <p><em>Calories:</em> ~40 kcal (from oil) | <em>Cost:</em> ~£0.05</p>
+
+  <p><strong>Baste with Butter:</strong></p>
+  <p>In the last minute of cooking, add 1 tbsp butter, 1 crushed garlic clove, and a sprig of rosemary or thyme.</p>
+  <p>Tilt the pan and spoon the melted butter over the steak repeatedly to baste.</p>
+  <p><em>Calories:</em> ~100 kcal | <em>Cost:</em> ~£0.25</p>
+
+  <p><strong>Rest & Serve:</strong></p>
+  <p>Remove from heat and let the steak rest for 5 minutes before slicing.</p>
+  <p>Serve with fries, salad, or garlic mash.</p>
+  <p><em>Calories:</em> ~— (depends on sides)</p>
+
+  <hr>
+
+  <p><strong>🔢 Total Estimated Calories (steak only):</strong> ~590 kcal</p>
+  <p><strong>💷 Total Estimated Cost (per steak):</strong> ~<strong>£4.10</strong></p>
+      </div>
+      <button class="toggle-btn">Read Full Recipe</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="divider"></div>
+
+
+<div class="diet-category easy-recipes-cards-section">
+<div class="cards-wrapper">
+<div class="recipe-card">
+      <img src="/static/pics/panna.jpg" alt="dessert Recipe">
+      <a href="https://www.youtube.com/shorts/r6I-QYNCmVI" target="_blank" class="yt-watch-btn">
+        <i class="fa-brands fa-youtube"></i> Watch Recipe on YouTube
+      </a>
+      <h3>🍮 Panna Cotta with Raspberry Sauce</h3>
+      <p class="preview">⏱️ Chill Time: 4 hrs | Prep Time: 10 mins</p>
+
+<div class="extra-content">
+  <p><strong>Make the Base:</strong></p>
+  <p>In a small pot, heat 250ml double cream, 100ml milk, 50g sugar, and 1/2 tsp vanilla extract over low heat until warm (not boiling).</p>
+  <p><em>Calories:</em> ~320 kcal | <em>Cost:</em> ~£1.10 (cream, milk, sugar, vanilla)</p>
+
+  <p><strong>Add Gelatin:</strong></p>
+  <p>Soften 1 leaf or 1 tsp powdered gelatin in 2 tbsp cold water for 5 mins. Stir into the warm cream mixture until dissolved.</p>
+  <p>Pour into 2 small ramekins or glasses. Chill in fridge for at least 4 hours.</p>
+  <p><em>Calories:</em> negligible addition | <em>Cost:</em> ~£0.15</p>
+
+  <p><strong>Make Raspberry Sauce:</strong></p>
+  <p>In a pan, heat 100g raspberries with 1 tbsp sugar and 1 tbsp lemon juice until soft. Mash or blend. Strain if preferred.</p>
+  <p><em>Calories:</em> ~50 kcal | <em>Cost:</em> ~£0.65</p>
+
+  <p><strong>Serve:</strong></p>
+  <p>Unmold panna cotta or serve in glass. Top with raspberry sauce and fresh berries if desired.</p>
+  <p><em>Calories:</em> ~20 kcal (garnish) | <em>Cost:</em> ~£0.30</p>
+
+  <hr>
+
+  <p><strong>🔢 Total Estimated Calories (per portion):</strong> ~390–400 kcal</p>
+  <p><strong>💷 Total Estimated Cost (per portion):</strong> ~<strong>£1.60</strong></p>
+      </div>
+      <button class="toggle-btn">Read Full Recipe</button>
+    </div>
+
+    <div class="recipe-card">
+      <img src="/static/pics/recipe1.jpg" alt="Tiramisu Recipe">
+      <a href="https://www.youtube.com/shorts/LLLlAfK_SBw" target="_blank" class="yt-watch-btn">
+        <i class="fa-brands fa-youtube"></i> Watch Recipe on YouTube
+      </a>
+      <h3>☕ Tiramisu</h3>
+      <p class="preview">⏱️ Prep Time: 20 mins</p>
+
+<div class="extra-content">
+  <p><strong>Make the Coffee Mix:</strong></p>
+  <p>Brew 200ml strong coffee. Stir in 1 tbsp sugar and 1 tsp vanilla. Let it cool. Optional: add 1 tbsp coffee liqueur (e.g. Kahlúa).</p>
+  <p><em>Calories:</em> ~20 kcal | <em>Cost:</em> ~£0.20</p>
+
+  <p><strong>Whip the Egg Yolks:</strong></p>
+  <p>Separate 2 eggs. Beat yolks with 50g sugar until pale and creamy (use electric whisk).</p>
+  <p><em>Calories:</em> ~160 kcal | <em>Cost:</em> ~£0.35</p>
+
+  <p><strong>Add Mascarpone:</strong></p>
+  <p>Gently fold in 200g mascarpone until smooth and thick.</p>
+  <p><em>Calories:</em> ~410 kcal | <em>Cost:</em> ~£1.60</p>
+
+  <p><strong>Fold in Egg Whites:</strong></p>
+  <p>In a separate bowl, beat egg whites to stiff peaks. Fold gently into the mascarpone mix to keep it airy.</p>
+  <p><em>Calories:</em> negligible addition | <em>Cost:</em> ~—</p>
+
+  <p><strong>Layer the Tiramisu:</strong></p>
+  <p>Dip ladyfingers (savoiardi) briefly in the coffee mix. Layer them in a dish. Spread mascarpone mixture over. Repeat for 2 layers.</p>
+  <p><em>Calories:</em> ~160 kcal | <em>Cost:</em> ~£0.70</p>
+
+  <p><strong>Chill & Finish:</strong></p>
+  <p>Cover and chill for 4–6 hours. Dust with cocoa powder before serving.</p>
+  <p><em>Calories:</em> ~10 kcal (cocoa) | <em>Cost:</em> ~£0.10</p>
+
+  <hr>
+
+  <p><strong>🔢 Total Estimated Calories (per serving):</strong> ~760 kcal</p>
+  <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£2.95</strong></p>
+      </div>
+      <button class="toggle-btn">Read Full Recipe</button>
+    </div>
+    <div class="recipe-card">
+      <img src="/static/pics/red.jpg" alt="red">
+      <a href="https://www.youtube.com/shorts/FQ5Rtk47BTM" target="_blank" class="yt-watch-btn">
+        <i class="fa-brands fa-youtube"></i> Watch Recipe on YouTube
+      </a>
+      <h3>🍛 Red Thai Curry</h3>
+      <p class="preview">⏱️ Time: 25–30 mins</p>
+
+<div class="extra-content">
+  <p><strong>Sauté the Curry Paste:</strong></p>
+  <p>Heat 1 tbsp coconut oil in a deep pan or wok. Add 2 tbsp red Thai curry paste and sauté for 1–2 minutes until aromatic.</p>
+  <p><em>Calories:</em> ~60 kcal | <em>Cost:</em> ~£0.35</p>
+
+  <p><strong>Add Coconut Milk:</strong></p>
+  <p>Pour in 400ml coconut milk. Stir to combine with the paste and bring to a gentle simmer.</p>
+  <p><em>Calories:</em> ~300 kcal | <em>Cost:</em> ~£1.00</p>
+
+  <p><strong>Add Protein & Veggies:</strong></p>
+  <p>Add 150g tofu, chicken, or prawns + sliced vegetables (e.g. bell pepper, carrot, green beans).</p>
+  <p>Simmer for 10–15 mins until protein is cooked and veg is tender-crisp.</p>
+  <p><em>Calories:</em> ~250 kcal | <em>Cost:</em> ~£1.80</p>
+
+  <p><strong>Season & Brighten:</strong></p>
+  <p>Add 1 tbsp soy sauce, 1 tsp sugar, and juice of 1/2 lime. Stir and taste. Add more paste for heat or lime for freshness.</p>
+  <p><em>Calories:</em> ~30 kcal | <em>Cost:</em> ~£0.30</p>
+
+  <p><strong>Serve:</strong></p>
+  <p>Spoon over jasmine or basmati rice. Garnish with fresh coriander, red chili, or crushed peanuts.</p>
+  <p><em>Calories:</em> ~200 kcal (w/ 100g rice) | <em>Cost:</em> ~£0.40</p>
+
+  <hr>
+
+  <p><strong>🔢 Total Estimated Calories:</strong> ~840 kcal</p>
+  <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£3.85</strong></p>
+      </div>
+      <button class="toggle-btn">Read Full Recipe</button>
+    </div>
+  </div>
+</div>
+<div class="divider"></div>
+
+
+<div class="diet-category easy-recipes-cards-section">
+<div class="cards-wrapper">
+<div class="recipe-card">
+      <img src="/static/pics/curry1.jpg" alt="curry Recipe">
+      <a href="https://youtu.be/9BqfjmmpRtU?si=Ct4-JkkhoD3s0tYR" target="_blank" class="yt-watch-btn">
+        <i class="fa-brands fa-youtube"></i> Watch Recipe on YouTube
+      </a>
+      <h3>🍗 Chicken Curry</h3>
+      <p class="preview">⏱️ Time: 30-40 mins</p>
+
+<div class="extra-content">
+  <p><strong>Prep the Chicken:</strong></p>
+  <p>Take 500g of chicken breast or thighs and cut them into bite-sized pieces. Pat dry with paper towels.</p>
+  <p>Season with salt, pepper, and a pinch of turmeric for color.</p>
+  <p><em>Calories:</em> ~250 kcal | <em>Cost:</em> ~£3.00 (Tesco chicken breast)</p>
+
+  <p><strong>Cook the Onion and Spices:</strong></p>
+  <p>Heat 1 tbsp vegetable oil in a pan over medium heat. Add 1 finely chopped onion and cook until golden brown.</p>
+  <p>Add 1 tsp cumin, 1 tsp coriander, 1 tsp paprika, and a pinch of cinnamon. Stir for 30 seconds.</p>
+  <p><em>Calories:</em> ~30 kcal (from oil and spices) | <em>Cost:</em> ~£0.20</p>
+
+  <p><strong>Cook the Chicken:</strong></p>
+  <p>Add the chicken pieces to the pan and brown on all sides for about 5-7 minutes.</p>
+  <p><em>Calories:</em> ~200 kcal (from chicken) | <em>Cost:</em> ~£1.50</p>
+
+  <p><strong>Add the Sauce:</strong></p>
+  <p>Pour in 1 can (400g) of chopped tomatoes and 1/2 cup of coconut milk.</p>
+  <p>Simmer for 15-20 minutes, until the chicken is cooked through and the sauce thickens.</p>
+  <p><em>Calories:</em> ~150 kcal (from coconut milk) | <em>Cost:</em> ~£0.50</p>
+
+  <p><strong>Rest & Serve:</strong></p>
+  <p>Remove from heat and let it sit for 5 minutes before serving.</p>
+  <p>Serve with steamed rice, naan bread, or a side of vegetables.</p>
+  <p><em>Calories:</em> ~— (depends on sides)</p>
+
+  <hr>
+
+  <p><strong>🔢 Total Estimated Calories (chicken only):</strong> ~600 kcal</p>
+  <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£4.70</strong></p>
+
+
+  <hr>
+
+  <p><strong>🔢 Total Estimated Calories:</strong> ~720–750 kcal</p>
+  <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£3.30</strong></p>
+      </div>
+      <button class="toggle-btn">Read Full Recipe</button>
+    </div>
+
+    <div class="recipe-card">
+      <img src="/static/pics/pasta1.jpg" alt="pasta Recipe">
+      <a href="https://www.youtube.com/shorts/tXoSDQYAtjc" target="_blank" class="yt-watch-btn">
+        <i class="fa-brands fa-youtube"></i> Watch Recipe on YouTube
+      </a>
+      <h3>🍝 Pasta al Pomodoro</h3>
+
+      <p class="preview">⏱️ Time: 20 mins</p>
+
+<div class="extra-content">
+  <p><strong>Cook the Pasta:</strong></p>
+  <p>Bring a large pot of salted water to a boil. Add 200g of your favorite pasta (spaghetti or penne work great).</p>
+  <p>Cook according to package instructions, usually about 8-10 minutes for al dente. Drain, reserving 1/2 cup of pasta water.</p>
+  <p><em>Calories:</em> ~200 kcal | <em>Cost:</em> ~£0.60 (Tesco pasta)</p>
+
+  <p><strong>Make the Sauce:</strong></p>
+  <p>Heat 2 tbsp olive oil in a large pan over medium heat. Add 2 cloves of minced garlic and cook until fragrant, about 30 seconds.</p>
+  <p>Add 400g canned chopped tomatoes, 1 tsp dried oregano, and a pinch of red chili flakes (optional). Simmer for 10-12 minutes until the sauce thickens.</p>
+  <p><em>Calories:</em> ~100 kcal (from olive oil and tomatoes) | <em>Cost:</em> ~£1.20 (Tesco tomatoes)</p>
+
+  <p><strong>Combine Pasta and Sauce:</strong></p>
+  <p>Add the drained pasta to the sauce, along with a splash of the reserved pasta water to loosen the sauce. Toss to coat.</p>
+  <p><em>Calories:</em> ~30 kcal (from pasta water) | <em>Cost:</em> ~£0.30</p>
+
+  <p><strong>Finish and Serve:</strong></p>
+  <p>Top with freshly chopped basil and a sprinkle of grated Parmesan cheese (optional).</p>
+  <p>Serve immediately with a drizzle of extra virgin olive oil for extra flavor.</p>
+  <p><em>Calories:</em> ~— (depends on toppings)</p>
+
+  <hr>
+
+  <p><strong>🔢 Total Estimated Calories (pasta only):</strong> ~330 kcal</p>
+  <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£2.10</strong></p>
+      </div>
+      <button class="toggle-btn">Read Full Recipe</button>
+    </div>
+    <div class="recipe-card">
+      <img src="/static/pics/beeef.png" alt="beef">
+      <a href="https://www.youtube.com/shorts/uc0U5Pv52KA" target="_blank" class="yt-watch-btn">
+        <i class="fa-brands fa-youtube"></i> Watch Recipe on YouTube
+      </a>
+      <h3>🍲 Beef Bourguignon</h3>
+
+      <p class="preview">⏱️ Time: 2 hours 30 mins-slow cooking </p>
+
+<div class="extra-content">
+  <p><strong>Prepare the Beef:</strong></p>
+  <p>Cut 1 kg of beef chuck or stewing beef into cubes (about 1.5 inches). Pat the beef dry with paper towels.</p>
+  <p>Season with salt and pepper on all sides.</p>
+  <p><em>Calories:</em> ~250 kcal (for the beef) | <em>Cost:</em> ~£7.00 (beef chuck)</p>
+
+  <p><strong>Brown the Beef:</strong></p>
+  <p>Heat 2 tbsp olive oil in a large Dutch oven or heavy pot over medium-high heat.</p>
+  <p>Brown the beef in batches, making sure not to crowd the pan. Remove the beef and set aside.</p>
+  <p><em>Calories:</em> ~100 kcal (from oil) | <em>Cost:</em> ~£0.10 (oil)</p>
+
+  <p><strong>Cook the Vegetables:</strong></p>
+  <p>In the same pot, add 2 diced carrots, 2 diced onions, and 2 cloves of minced garlic. Cook for 5-7 minutes until softened.</p>
+  <p>Stir in 2 tbsp tomato paste and cook for another 2 minutes.</p>
+  <p><em>Calories:</em> ~70 kcal (from vegetables) | <em>Cost:</em> ~£1.00 (carrots, onions, garlic)</p>
+
+  <p><strong>Add Wine and Broth:</strong></p>
+  <p>Pour in 750 ml red wine (preferably Burgundy or any dry red wine) and 500 ml beef broth.</p>
+  <p>Scrape up any browned bits from the bottom of the pot, then add 2 tbsp fresh thyme and 2 bay leaves.</p>
+  <p>Return the beef to the pot, bring to a simmer, then cover and reduce heat to low. Let it cook for about 1.5 hours.</p>
+  <p><em>Calories:</em> ~150 kcal (from wine and broth) | <em>Cost:</em> ~£3.50 (wine, broth)</p>
+
+  <p><strong>Cook the Mushrooms and Onions:</strong></p>
+  <p>While the beef is cooking, heat 1 tbsp butter in a separate pan over medium heat.</p>
+  <p>Add 200g small pearl onions and 200g sliced mushrooms. Cook for about 10 minutes until browned.</p>
+  <p><em>Calories:</em> ~50 kcal (from butter and mushrooms) | <em>Cost:</em> ~£1.50 (onions, mushrooms, butter)</p>
+
+  <p><strong>Finish the Dish:</strong></p>
+  <p>Once the beef is tender, add the mushrooms and onions to the pot and stir. Simmer for an additional 30 minutes to combine the flavors.</p>
+  <p>Serve with mashed potatoes or crusty bread.</p>
+  <p><em>Calories:</em> ~— (depends on sides)</p>
+
+  <hr>
+
+  <p><strong>🔢 Total Estimated Calories (beef only):</strong> ~600 kcal</p>
+  <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£8.50</strong></p>
+      </div>
+      <button class="toggle-btn">Read Full Recipe</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="divider"></div>
+
+<div class="diet-category easy-recipes-cards-section">
+  <div class="cards-wrapper">
+  <div class="recipe-card">
+        <img src="/static/pics/pesto.jpg" alt="pesto Recipe">
+        <a href="https://www.youtube.com/shorts/tQ-qKkNHhAk" target="_blank" class="yt-watch-btn">
+          <i class="fa-brands fa-youtube"></i> Watch Recipe on YouTube
+        </a>
+        <h3>🍝 Pesto Pasta (Using Store-Bought Pesto)</h3>
+        <p class="preview">⏱️ Time: 15-20 mins</p>
+  
+  <div class="extra-content">
+    <p><strong>Boil the Pasta:</strong></p>
+    <p>Bring a large pot of salted water to a boil. Add 200g of pasta (spaghetti, penne, fusilli, or your choice).</p>
+    <p>Cook according to the package instructions, typically around 8-10 minutes for al dente.</p>
+    <p><em>Calories:</em> ~250 kcal (for pasta) | <em>Cost:</em> ~£0.50 (for pasta)</p>
+  
+    <p><strong>Drain and Save Some Pasta Water:</strong></p>
+    <p>Once the pasta is cooked, reserve about 1 cup of pasta water and drain the rest.</p>
+    <p><em>Calories:</em> ~5 kcal (for water) | <em>Cost:</em> ~£0.00</p>
+  
+    <p><strong>Combine with Pesto:</strong></p>
+    <p>In a large pan, heat 2 tbsp olive oil over medium heat.</p>
+    <p>Add 4-5 tbsp of store-bought pesto (adjust according to taste) to the pan, and stir for 1-2 minutes to warm it up.</p>
+    <p>Once the pesto is warm, add the drained pasta to the pan, along with a little bit of the reserved pasta water to create a smooth sauce.</p>
+    <p><em>Calories:</em> ~150 kcal (from pesto) | <em>Cost:</em> ~£1.50 (store-bought pesto)</p>
+  
+    <p><strong>Mix and Serve:</strong></p>
+    <p>Mix the pasta and pesto together until well coated. Add a little more pasta water if needed to reach the desired consistency.</p>
+    <p>Serve with grated Parmesan or a sprinkle of pine nuts for extra flavor!</p>
+    <p><em>Calories:</em> ~— (depends on toppings)</p>
+  
+    <hr>
+  
+    <p><strong>🔢 Total Estimated Calories (pasta + pesto):</strong> ~400 kcal</p>
+    <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£2.00</strong></p>
+  
+  
+    <hr>
+  
+    <p><strong>🔢 Total Estimated Calories:</strong> ~720–750 kcal</p>
+    <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£3.30</strong></p>
+        </div>
+        <button class="toggle-btn">Read Full Recipe</button>
+      </div>
+  
+      <div class="recipe-card">
+        <img src="/static/pics/fish.jpg" alt="fish Recipe">
+        <a href="https://www.youtube.com/shorts/leFx8qZbSUY" target="_blank" class="yt-watch-btn">
+          <i class="fa-brands fa-youtube"></i> Watch Recipe on YouTube
+        </a>
+        <h3>🐟 Filet-O-Fish</h3>
+  
+        <p class="preview">⏱️ Time: 20 mins</p>
+  
+  <div class="extra-content">
+    <p><strong>Prepare the Fish Fillets:</strong></p>
+  <p>Use 2 frozen or fresh white fish fillets (such as cod or haddock). Pat them dry with paper towels.</p>
+  <p>Coat the fillets lightly in flour, then dip in beaten egg, and finally coat in breadcrumbs or panko for extra crispiness.</p>
+  <p><em>Calories:</em> ~300 kcal | <em>Cost:</em> ~£2.00 (for fish fillets)</p>
+
+  <p><strong>Fry the Fish:</strong></p>
+  <p>Heat vegetable oil (about 1-2 cups) in a deep pan or skillet over medium-high heat.</p>
+  <p>Carefully fry the fish fillets for 3-4 minutes per side until golden brown and cooked through.</p>
+  <p><em>Calories:</em> ~150 kcal (from oil) | <em>Cost:</em> ~£0.10 (for oil)</p>
+
+  <p><strong>Toast the Buns:</strong></p>
+  <p>Toast 2 soft burger buns in a dry pan or under the grill until lightly golden and warm.</p>
+  <p><em>Calories:</em> ~150 kcal | <em>Cost:</em> ~£0.30 (for buns)</p>
+
+  <p><strong>Assemble the Filet-O-Fish:</strong></p>
+  <p>Spread a thin layer of tartar sauce or mayonnaise on the bottom half of each bun.</p>
+  <p>Place the crispy fish fillet on the bun, then top with a slice of cheddar cheese (optional) and the top bun.</p>
+  <p><em>Calories:</em> ~100 kcal (for tartar sauce) | <em>Cost:</em> ~£0.50 (for sauce and cheese)</p>
+
+  <hr>
+
+  <p><strong>🔢 Total Estimated Calories (sandwich only):</strong> ~700 kcal</p>
+  <p><strong>💷 Total Estimated Cost (per sandwich):</strong> ~<strong>£3.90</strong></p>
+        </div>
+        <button class="toggle-btn">Read Full Recipe</button>
+      </div>
+      <div class="recipe-card">
+        <img src="/static/pics/wings.jpg" alt="wings">
+        <a href="https://www.youtube.com/shorts/uSlW7A5L3zc" target="_blank" class="yt-watch-btn">
+          <i class="fa-brands fa-youtube"></i> Watch Recipe on YouTube
+        </a>
+        <h3>🍗 Sweet Buffalo Wings</h3>
+  
+        <p class="preview">⏱️ Time 20 mins</p>
+  
+  <div class="extra-content">
+    <p><strong>Prepare the Wings:</strong></p>
+    <p>Take 12-15 chicken wings (drumettes and flats) and pat them dry with paper towels.</p>
+    <p>Season the wings with salt, pepper, and a little paprika or garlic powder.</p>
+    <p><em>Calories:</em> ~200 kcal | <em>Cost:</em> ~£3.50 (for wings)</p>
+  
+    <p><strong>Fry the Wings:</strong></p>
+    <p>Heat vegetable oil in a deep pan or fryer to 180°C (350°F).</p>
+    <p>Fry the chicken wings for 8-10 minutes, until golden and crispy. Remove and drain excess oil on paper towels.</p>
+    <p><em>Calories:</em> ~350 kcal (from oil) | <em>Cost:</em> ~£0.10 (for oil)</p>
+  
+    <p><strong>Make the Buffalo Sauce:</strong></p>
+    <p>In a saucepan, melt 1/2 cup of unsalted butter over medium heat.</p>
+    <p>Once melted, add 1/2 cup of hot sauce (Frank's RedHot is recommended), 1 tablespoon of honey, and 1 tablespoon of brown sugar. Stir well to combine.</p>
+    <p>Let it simmer for 2-3 minutes until thickened slightly.</p>
+    <p><em>Calories:</em> ~150 kcal (for sauce) | <em>Cost:</em> ~£0.80 (for sauce ingredients)</p>
+  
+    <p><strong>Coat the Wings:</strong></p>
+    <p>Place the fried wings into a large bowl, then pour the buffalo sauce over them. Toss the wings until fully coated in the sauce.</p>
+    <p><em>Calories:</em> ~50 kcal (additional sauce calories) | <em>Cost:</em> ~£0.30 (for extra sauce)</p>
+  
+    <p><strong>Serve:</strong></p>
+    <p>Serve the wings hot with a side of blue cheese or ranch dressing for dipping.</p>
+    <p><em>Calories:</em> ~100 kcal (for dressing) | <em>Cost:</em> ~£0.50 (for dipping sauces)</p>
+  
+    <hr>
+  
+    <p><strong>🔢 Total Estimated Calories (wings only):</strong> ~700 kcal</p>
+    <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£5.20</strong></p>
+        </div>
+        <button class="toggle-btn">Read Full Recipe</button>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="divider"></div>
+
+<footer class="footer-section">
+    <div class="footer-content animate-slide-up">
+      <div class="footer-row">
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/recipes">Recipes</a>
+          <a href="/diets">Diets</a>
+          <a href="/about">About Us</a>
+          <a href="/faqs">FAQs</a>
+        </div>
+  
+        <div class="footer-newsletter">
+          <p>Subscribe to our newsletter</p>
+          <form class="newsletter-form" action="#" method="POST">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <button type="submit">Subscribe</button>
+            <p class="form-message hidden">Thank you for your email!</p>
+          </form>
+        </div>
+  
+        <div class="footer-logo">
+          <img src="/static/pics/logo.png" alt="Foodie Logo" />
+          <div class="footer-socials">
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="footer-bottom">
+        <p>&copy; 2025 unifoodie. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>

@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodie | diets</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles3.css') }}" />
+  <script defer src="{{ url_for('static', filename='script1.js') }}"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+  <header class="navbar">
+    <a href="/" class="logo">
+      <img src="{{ url_for('static', filename='pics/logo.png') }}" alt="Foodie Logo" />
+    </a>
+        <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/recipes">Recipes</a>
+      <a href="/diets">Diets</a>
+      <a href="/about">About Us</a>
+      <a href="/faqs">FAQs</a>
+    </nav>
+    <div class="menu-toggle" id="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+</header>
+
+  <section class="light-hero">
+    <div class="hero-text animate-slide-up">
+      <h1>In unifoodie <span>we try catering</span> for every dietry options</h1>
+     
+  </div>
+
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-item back-blur">
+          <img src="/static/pics/vegan.png" alt="Food 1">
+        </div>
+        <div class="carousel-item back">
+          <img src="/static/pics/halal.png" alt="Food 2">
+        </div>
+        <div class="carousel-item front">
+          <img src="/static/pics/vegetrian.png" alt="Food 3">
+        </div>
+        <div class="carousel-item back">
+          <img src="/static/pics/gluten.png" alt="Food 4">
+        </div>
+        <div class="carousel-item back-blur">
+          <img src="/static/pics/lactose.png" alt="Food 5">
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button id="prevBtn">&#10094;</button>
+        <button id="nextBtn">&#10095;</button>
+      </div>
+    </div>
+    
+  </section>
+
+  <div class="diet-category vegetarian-cards-section">
+    <h2>Vegetarian</h2>
+    <div class="cards-wrapper">
+      <div class="recipe-card">
+        <img src="/static/pics/tofu.jpg" alt="Vegetarian Recipe">
+        <h3>🥗The tofu bowl</h3>
+        <p class="preview">⏱️ Time: 15–20 mins
+        </p>
+        <div class="extra-content">
+          <p><strong>Cook the Edamame:</strong></p>
+          <p>Boil or steam edamame for 4–5 minutes. Drain and let cool.</p>
+          <p><em>Calories:</em> 121 kcal | <em>Cost:</em> ~£1.50 (150g pack)</p>
+        
+          <p><strong>Boil the Eggs:</strong></p>
+          <p>Place eggs in a pot of water, bring to a boil, then simmer for 7–8 minutes.</p>
+          <p>Cool in cold water, peel, and cut in halves.</p>
+          <p><em>Calories:</em> 155 kcal (2 eggs) | <em>Cost:</em> ~£0.50</p>
+        
+          <p><strong>Prepare the Tofu:</strong></p>
+          <p>In a bowl, toss cubed tofu with chicken-style seasoning and soy sauce.</p>
+          <p>Heat olive oil in a pan, and pan-fry the tofu for ~6–8 minutes until golden and crispy.</p>
+          <p>Add a drizzle of sesame oil at the end for flavor.</p>
+          <p><em>Calories:</em> 117 kcal (150g) | <em>Cost:</em> ~£1.20</p>
+        
+          <p><strong>Make the Dressing:</strong></p>
+          <p>Whisk all dressing ingredients in a bowl. Adjust thickness with water as needed.</p>
+          <p><em>Calories:</em> ~100 kcal | <em>Cost:</em> ~£0.40 (depends on mix)</p>
+        
+          <p><strong>Assemble the Bowl:</strong></p>
+          <p>Start with a bed of salad leaves.</p>
+          <p>Arrange cabbage, carrot, cucumber, bell pepper, and avocado on top.</p>
+          <p>Add the edamame, tofu, and halved eggs. Drizzle with the dressing.</p>
+          <p>
+            <em>Calories:</em> ~150 kcal (combined veg) |
+            <em>Cost:</em> ~£1.52 (includes: lettuce, red cabbage, carrot, cucumber, pepper, avocado)
+          </p>
+        
+          <p><strong>Optional Toppings:</strong></p>
+          <p>Toasted sesame seeds (~10g) <em>•</em> ~58 kcal <em>•</em> ~£0.12</p>
+          <p>Chopped green onions (~10g) <em>•</em> ~3 kcal <em>•</em> ~£0.10</p>
+          <p>Chili flakes or sriracha (light sprinkle) <em>•</em> ~2 kcal <em>•</em> ~£0.05</p>
+        
+          <hr>
+        
+          <p><strong>🔢 Total Estimated Calories:</strong> ~639 kcal</p>
+          <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£5.52</strong></p>
+        </div>
+        <button class="toggle-btn">Read Full Recipe</button>
+      </div>
+      <div class="recipe-card">
+        <img src="/static/pics/pesto.jpg" alt="Vegetarian Recipe">
+        <h3>🍝 Pesto Pasta with Cherry Tomatoes</h3>
+        <p class="preview">⏱️ Time: 15–20 mins
+        </p>
+        <div class="extra-content">
+          <p>🔥 <strong>Instructions</strong></p>
+
+          <p><strong>Cook the Pasta:</strong></p>
+          <p>Bring a pot of salted water to a boil. Add pasta and cook according to package instructions until al dente.</p>
+          <p>Drain and reserve a little pasta water (2–3 tbsp).</p>
+          <p><em>Calories:</em> ~210 kcal (per 75g dry pasta) | <em>Cost:</em> ~£0.20</p>
+        
+          <p><strong>Prepare the Tomatoes:</strong></p>
+          <p>While pasta cooks, heat olive oil in a pan over medium heat.</p>
+          <p>Add halved cherry tomatoes and sauté for 3–4 minutes until softened and slightly blistered.</p>
+          <p>Season with a pinch of salt and pepper.</p>
+          <p><em>Calories:</em> ~25 kcal (1/2 cup) + ~60 kcal (1 tbsp olive oil) | <em>Cost:</em> ~£0.15 (tomatoes) + £0.10 (oil)</p>
+        
+          <p><strong>Combine:</strong></p>
+          <p>Return drained pasta to the pot or a large mixing bowl.</p>
+          <p>Stir in the pesto and reserved pasta water to loosen it up.</p>
+          <p>Add the sautéed tomatoes and toss gently to combine everything.</p>
+          <p><em>Calories:</em> ~80–100 kcal (1.5 tbsp pesto) | <em>Cost:</em> ~£0.25</p>
+        
+          <p><strong>Serve:</strong></p>
+          <p>Plate up and top with grated parmesan or nutritional yeast if using.</p>
+          <p>Garnish with fresh basil leaves for extra flavor and color.</p>
+          <p><em>Calories:</em> ~40 kcal (1 tbsp grated topping) | <em>Cost:</em> ~£0.20</p>
+        
+          <hr>
+        
+          <p><strong>🔢 Total Estimated Calories:</strong> ~435–455 kcal (per serving)</p>
+          <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£0.90 – £1.00</strong></p>
+        </div>
+        <button class="toggle-btn">Read Full Recipe</button>
+      </div>
+      <div class="recipe-card">
+        <img src="/static/pics/toast.jpg" alt="Vegetarian Recipe">
+        <h3>🍞 French Toast with Bananas & Blueberries</h3>
+        <p class="preview">⏱️ Time: 15 mins
+        </p>
+        <div class="extra-content">
+          <p>🔥 <strong>Instructions</strong></p>
+
+          <p><strong>Make the Batter:</strong></p>
+  <p>In a shallow bowl, whisk together eggs, milk, vanilla, cinnamon, and a pinch of salt.</p>
+  <p><em>Calories:</em> ~140 kcal (2 eggs + 100ml milk) | <em>Cost:</em> ~£0.40</p>
+
+  <p><strong>Dip the Bread:</strong></p>
+  <p>Dip each slice of bread into the egg mixture, coating both sides well.</p>
+  <p><em>Calories:</em> ~130 kcal (2 slices white bread) | <em>Cost:</em> ~£0.20</p>
+
+  <p><strong>Cook the Toast:</strong></p>
+  <p>Heat butter or oil in a pan over medium heat.</p>
+  <p>Place soaked bread in the pan and cook for 2–3 minutes on each side until golden brown.</p>
+  <p><em>Calories:</em> ~80 kcal (1 tsp butter/oil) | <em>Cost:</em> ~£0.10</p>
+
+  <p><strong>Prepare the Toppings:</strong></p>
+  <p>While the toast is cooking, warm the blueberries in a small saucepan or microwave until slightly softened (optional).</p>
+  <p>Slice the banana just before serving to keep it fresh.</p>
+  <p><em>Calories:</em> ~95 kcal (1 banana) + ~40 kcal (50g blueberries) | <em>Cost:</em> ~£0.50</p>
+
+  <p><strong>Assemble:</strong></p>
+  <p>Stack the French toast on plates.</p>
+  <p>Top with banana slices and blueberries.</p>
+  <p>Drizzle generously with maple syrup.</p>
+  <p><em>Calories:</em> ~60 kcal (1 tbsp maple syrup) | <em>Cost:</em> ~£0.25</p>
+
+  <hr>
+
+  <p><strong>🔢 Total Estimated Calories:</strong> ~545–560 kcal (per serving)</p>
+  <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£1.45 – £1.60</strong></p>        </div>
+        <button class="toggle-btn">Read Full Recipe</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="diet-category halal-cards-section">
+    <h2>Halal</h2>
+    <div class="cards-wrapper">
+      <div class="recipe-card">
+        <img src="/static/pics/shawarma.jpg" alt="halal Recipe">
+        <h3>🥙 Chicken Shawarma </h3>
+        <p class="preview">⏱️ Time: 30 mins (plus optional marination).</p>
+        <div class="extra-content">
+          <div class="instructions">
+            <p>🔥 <strong>Instructions</strong></p>
+          
+            <p><strong>Marinate the Chicken:</strong></p>
+            <p>In a bowl, mix yogurt, olive oil, lemon juice, and all spices.</p>
+            <p>Add chicken slices and coat well. Let marinate for 15–30 minutes (or overnight if you can).</p>
+            <p><em>Calories:</em> ~200 kcal (150g chicken + marinade) | <em>Cost:</em> ~£1.50</p>
+          
+            <p><strong>Cook the Chicken:</strong></p>
+            <p>Heat a skillet or grill pan over medium-high heat.</p>
+            <p>Add chicken and cook for 6–8 minutes, turning until fully cooked and slightly charred.</p>
+            <p><em>Calories:</em> Included above | <em>Cost:</em> —</p>
+          
+            <p><strong>Make the Sauce (Optional):</strong></p>
+            <p>Mix yogurt, garlic, lemon juice, and a pinch of salt in a small bowl.</p>
+            <p><em>Calories:</em> ~40 kcal (2 tbsp) | <em>Cost:</em> ~£0.20</p>
+          
+            <p><strong>Assemble the Shawarma:</strong></p>
+            <p>Warm the flatbreads or pitas.</p>
+            <p>Spread with garlic sauce or tahini (optional).</p>
+            <p>Add cooked chicken, lettuce, onion, tomato, cucumber, and pickles.</p>
+            <p>Wrap tightly or serve open like a shawarma bowl.</p>
+            <p>
+              <em>Calories:</em> ~250 kcal (flatbread + veg + sauce) |
+              <em>Cost:</em> ~£0.90
+            </p>
+          
+            <hr>
+          
+            <p><strong>🔢 Total Estimated Calories:</strong> ~490–520 kcal (per wrap)</p>
+            <p><strong>💷 Total Estimated Cost (per wrap):</strong> ~<strong>£2.60</strong></p>
+          </div>
+                  </div>
+        <button class="toggle-btn">Read Full Recipe</button>
+      </div>
+      <div class="recipe-card">
+        <img src="/static/pics/biryani.jpg" alt="halal Recipe">
+        <h3>🍛 Easy Chicken Biryani (One-Pot Style)</h3>
+        <p class="preview">⏱️ Time: 45–60 mins
+        </p>
+        <div class="extra-content">
+          <p>🔥 <strong>Instructions</strong></p>
+          <p><strong>Marinate the Chicken:</strong></p>
+          <p>In a bowl, mix all marinade ingredients. Add chicken and coat well.</p>
+          <p>Let it marinate for at least 30 mins (overnight for best flavor).</p>
+          <p><em>Calories:</em> ~210 kcal (chicken + yogurt + spices) | <em>Cost:</em> ~£1.60 (based on 150g chicken thigh)</p>
+        
+          <p><strong>Cook the Rice:</strong></p>
+          <p>Boil water with a pinch of salt, cloves, cardamom, cinnamon, and bay leaf.</p>
+          <p>Add soaked rice and cook until 70% done. Drain and set aside.</p>
+          <p><em>Calories:</em> ~220 kcal (75g basmati rice) | <em>Cost:</em> ~£0.25</p>
+        
+          <p><strong>Cook the Chicken:</strong></p>
+          <p>In a large deep pan, heat oil or ghee. Add sliced onions and fry until golden brown.</p>
+          <p>Remove half for garnish.</p>
+          <p>Add marinated chicken to remaining onions. Cook until chicken is sealed and partially cooked (10–12 mins).</p>
+          <p><em>Calories:</em> ~120 kcal (1 tbsp ghee + 1/2 onion) | <em>Cost:</em> ~£0.30</p>
+        
+          <p><strong>Layer the Biryani:</strong></p>
+          <p>Lower the heat. Spread the par-cooked rice evenly over the chicken.</p>
+          <p>Sprinkle with fried onions, coriander, mint, and saffron milk if using.</p>
+          <p>Cover tightly with a lid or foil.</p>
+          <p><em>Calories:</em> ~70 kcal (garnish, saffron milk, herbs) | <em>Cost:</em> ~£0.25</p>
+        
+          <p><strong>Dum Cooking (Steam it!):</strong></p>
+          <p>Cook on very low heat for 15–20 mins to let flavors blend.</p>
+          <p><em>Calories:</em> Included above | <em>Cost:</em> —</p>
+        
+          <p><strong>Serve:</strong></p>
+          <p>Gently fluff with a spoon and serve hot with yogurt raita or salad.</p>
+          <p><em>Calories:</em> ~80 kcal (2 tbsp raita) | <em>Cost:</em> ~£0.20</p>
+        
+          <hr>
+        
+          <p><strong>🔢 Total Estimated Calories:</strong> ~700–750 kcal (per serving)</p>
+          <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£2.60</strong></p>       </div>
+        <button class="toggle-btn">Read Full Recipe</button>
+      </div>
+      <div class="recipe-card">
+        <img src="/static/pics/falafel.jpg" alt="halal Recipe">
+        <h3>🧆 Egyptian Falafel</h3>
+        <p class="preview">⏱️ Time: 40 mins (+ soaking time).</p>
+        <div class="extra-content">
+          <p>🔥 <strong>Instructions</strong></p>
+
+          <p><strong>Soak the Fava Beans:</strong></p>
+          <p>Rinse and soak fava beans in water overnight (8–12 hours). Drain before using.</p>
+          <p><em>Calories:</em> ~170 kcal (100g dry fava beans) | <em>Cost:</em> ~£0.60</p>
+        
+          <p><strong>Make the Mixture:</strong></p>
+          <p>In a food processor, blend soaked fava beans, onion, garlic, parsley, coriander, and dill into a smooth but textured paste.</p>
+          <p>Add cumin, ground coriander, and salt. Mix well.</p>
+          <p><em>Calories:</em> ~35 kcal (herbs, onion, garlic, spices combined) | <em>Cost:</em> ~£0.40</p>
+        
+          <p><strong>Rest & Prep:</strong></p>
+          <p>Let the mixture rest for 15–30 mins.</p>
+          <p>Just before frying, mix in baking soda.</p>
+          <p><em>Calories:</em> 0 kcal | <em>Cost:</em> ~£0.05</p>
+        
+          <p><strong>Shape the Falafel:</strong></p>
+          <p>Wet your hands and shape small balls or patties.</p>
+          <p>Dip the tops in sesame seeds for extra crunch.</p>
+          <p><em>Calories:</em> ~50 kcal (1 tbsp sesame seeds for 6 falafel) | <em>Cost:</em> ~£0.10</p>
+        
+          <p><strong>Fry:</strong></p>
+          <p>Heat oil in a deep pan over medium-high heat.</p>
+          <p>Fry in batches for 3–4 mins per side until golden and crispy.</p>
+          <p><em>Calories:</em> ~80 kcal (oil absorption for 6 pieces) | <em>Cost:</em> ~£0.15</p>
+        
+          <p><strong>Serve:</strong></p>
+          <p>Drain on paper towels.</p>
+          <p>Serve in pita with tahini sauce, tomatoes, cucumbers, and pickles.</p>
+          <p><em>Calories:</em> ~200 kcal (1 pita + fillings + tahini) | <em>Cost:</em> ~£0.80</p>
+        
+          <hr>
+        
+          <p><strong>🔢 Total Estimated Calories:</strong> ~535–550 kcal (per serving of 5–6 falafel + fillings)</p>
+          <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£2.10</strong></p>        </div>
+        <button class="toggle-btn">Read Full Recipe</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="diet-category vegan-cards-section">
+    <h2>Vegan</h2>
+    <div class="cards-wrapper">
+      <div class="recipe-card">
+        <img src="/static/pics/humus.jpg" alt="Vegan Recipe">
+        <h3>🥣 Vegan Hummus with Avocado & Cherry Tomatoes.</h3>
+        <p class="preview">⏱️ Time: 10–15 mins.</p>
+        <div class="extra-content">
+          <p>🔥 <strong>Instructions</strong></p>
+
+          <p><strong>Make the Hummus:</strong></p>
+          <p>Add chickpeas, tahini, garlic, lemon juice, olive oil, and salt to a blender or food processor.</p>
+          <p>Blend until smooth. Add water gradually for creamier texture.</p>
+          <p>Taste and adjust seasoning if needed (more lemon, salt, or tahini).</p>
+          <p><em>Calories:</em> ~300 kcal (chickpeas, tahini, olive oil) | <em>Cost:</em> ~£0.80 (1/2 can chickpeas + 1 tbsp tahini + 1 tbsp oil)</p>
+        
+          <p><strong>Prep the Topping:</strong></p>
+          <p>In a small bowl, mix diced or smashed avocado with lemon juice, salt, and pepper.</p>
+          <p>In another bowl, season cherry tomatoes with olive oil and a pinch of salt.</p>
+          <p><em>Calories:</em> ~120 kcal (1/2 avocado + 1/4 cup tomatoes + oil) | <em>Cost:</em> ~£0.75</p>
+        
+          <p><strong>Assemble:</strong></p>
+          <p>Spread the hummus in a shallow bowl or plate using the back of a spoon to create swirls.</p>
+          <p>Top with the avocado and cherry tomatoes.</p>
+          <p>Drizzle a little olive oil on top and sprinkle parsley or chili flakes if desired.</p>
+          <p><em>Calories:</em> ~40 kcal (garnish & oil) | <em>Cost:</em> ~£0.10</p>
+        
+          <p><strong>Serve:</strong></p>
+          <p>Serve with warm pita, crackers, veggie sticks, or as part of a mezze board.</p>
+          <p><em>Calories:</em> ~150 kcal (1 small pita) | <em>Cost:</em> ~£0.35</p>
+        
+          <hr>
+        
+          <p><strong>🔢 Total Estimated Calories:</strong> ~610 kcal (per serving)</p>
+          <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£2.00</strong></p>        </div>
+        <button class="toggle-btn">Read Full Recipe</button>
+      </div>
+      <div class="recipe-card">
+        <img src="/static/pics/tacos.jpg" alt="Vegan Recipe">
+        <h3>🌮 Avocado & Veggie Vegan Tacos</h3>
+        <p class="preview">⏱️ Time: 20 mins.</p>
+        <div class="extra-content">
+          <p>🔥 <strong>Instructions</strong></p>
+          <p><strong>Prep the Veggies:</strong></p>
+          <p>Shred cabbage, grate carrot, and slice bell pepper.</p>
+          <p>If using canned beans or corn, drain and rinse them.</p>
+          <p><em>Calories:</em> ~80 kcal (veg + 1/4 cup corn + 1/4 cup beans) | <em>Cost:</em> ~£0.50</p>
+        
+          <p><strong>Mix the Base:</strong></p>
+          <p>In a bowl, combine cabbage, carrot, bell pepper, corn, and beans.</p>
+          <p>Add lime juice, salt, and pepper. Toss well.</p>
+          <p><em>Calories:</em> Included above | <em>Cost:</em> —</p>
+        
+          <p><strong>Make the Sauce:</strong></p>
+          <p>In a small bowl, mix vegan mayo/yogurt, lime juice, maple, garlic powder, and cumin.</p>
+          <p>Thin with a splash of water if needed.</p>
+          <p><em>Calories:</em> ~60 kcal (1 tbsp sauce per taco) | <em>Cost:</em> ~£0.25</p>
+        
+          <p><strong>Heat the Tortillas:</strong></p>
+          <p>Warm tortillas in a dry pan or microwave for 10–20 seconds.</p>
+          <p><em>Calories:</em> ~100 kcal per tortilla | <em>Cost:</em> ~£0.20</p>
+        
+          <p><strong>Assemble the Tacos:</strong></p>
+          <p>Spread or layer avocado on each tortilla.</p>
+          <p>Top with veggie mix and drizzle with the creamy sauce.</p>
+          <p>Sprinkle with chopped coriander and a dash of hot sauce if you like heat.</p>
+          <p><em>Calories:</em> ~80 kcal (1/4 avocado + coriander + hot sauce) | <em>Cost:</em> ~£0.35</p>
+        
+          <p><strong>Serve:</strong></p>
+          <p>Eat fresh! Best enjoyed immediately for max crunch and flavor.</p>
+        
+          <hr>
+        
+          <p><strong>🔢 Total Estimated Calories:</strong> ~320–350 kcal (per taco)</p>
+          <p><strong>💷 Total Estimated Cost (per taco):</strong> ~<strong>£1.30</strong></p>       </div>
+        <button class="toggle-btn">Read Full Recipe</button>
+      </div>
+      <div class="recipe-card">
+        <img src="/static/pics/falafel1.jpg" alt="Vegan Recipe">
+        <h3>🧆 Crispy Vegan Falafel</h3>
+        <p class="preview">⏱️ Time: 30 mins (plus soaking time)
+          .</p>
+        <div class="extra-content">
+          <p>🔥 <strong>Instructions</strong></p>
+
+          <p><strong>Soak the Chickpeas:</strong></p>
+  <p>Place dried chickpeas in a bowl and cover with water.</p>
+  <p>Let soak overnight (8–12 hours), then drain and rinse.</p>
+  <p><em>Calories:</em> ~170 kcal (100g dried chickpeas) | <em>Cost:</em> ~£0.55</p>
+
+  <p><strong>Make the Mixture:</strong></p>
+  <p>Add soaked chickpeas, onion, garlic, herbs, cumin, coriander, salt, and pepper to a food processor.</p>
+  <p>Pulse until mixture is crumbly but holds together — not too smooth!</p>
+  <p>Mix in baking powder. Add flour if too wet or loose.</p>
+  <p><em>Calories:</em> ~50 kcal (herbs, onion, garlic, spices, flour) | <em>Cost:</em> ~£0.30</p>
+
+  <p><strong>Shape:</strong></p>
+  <p>Use damp hands or a falafel scoop to form balls or patties.</p>
+  <p><em>Calories:</em> — | <em>Cost:</em> —</p>
+
+  <p><strong>Fry:</strong></p>
+  <p>Heat oil in a pan (~2 inches deep) to medium-high heat.</p>
+  <p>Fry falafel in batches for 3–4 minutes per side until deep golden and crispy.</p>
+  <p><em>Calories:</em> ~90 kcal (oil absorbed for 5 falafel) | <em>Cost:</em> ~£0.15</p>
+
+  <p><strong>Serve:</strong></p>
+  <p>Drain on paper towels. Serve in pita, bowls, or with dips like tahini or hummus.</p>
+  <p><em>Calories:</em> ~150 kcal (1 pita + sauce + garnish) | <em>Cost:</em> ~£0.75</p>
+
+  <hr>
+
+  <p><strong>🔢 Total Estimated Calories:</strong> ~460–480 kcal (per serving)</p>
+  <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£1.75</strong></p>        </div>
+        <button class="toggle-btn">Read Full Recipe</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="diet-category glutenfree-cards-section">
+    <h2>Gluten Free </h2>
+    <div class="cards-wrapper">
+      <div class="recipe-card">
+        <img src="/static/pics/pizza.jpg" alt="Gluten-Free Recipe">
+        <h3>🍕 Gluten-Free Pizza</h3>
+        <p class="preview">⏱️ Time: 40 mins
+        </p>
+        <div class="extra-content">
+          <p>🔥 <strong>Instructions</strong></p>
+          <p><strong>Make the Dough:</strong></p>
+          <p>In a bowl, mix gluten-free flour, baking powder, and salt.</p>
+          <p>Add yogurt and olive oil. Mix to form a soft dough. Add a splash of water if needed.</p>
+          <p>Knead lightly until smooth, then let it rest for 10 minutes.</p>
+          <p><em>Calories:</em> ~220 kcal (per base) | <em>Cost:</em> ~£1.10 (flour, yogurt, oil)</p>
+        
+          <p><strong>Preheat & Shape:</strong></p>
+          <p>Preheat oven to 220°C (430°F).</p>
+          <p>Roll out the dough on parchment paper into a circle or oval (~1/4 inch thick).</p>
+        
+          <p><strong>Pre-bake the Crust:</strong></p>
+          <p>Transfer to a baking tray and bake for 8–10 minutes until just firm.</p>
+        
+          <p><strong>Add Toppings:</strong></p>
+          <p>Spread sauce over the base. Add cheese and your favorite toppings.</p>
+          <p><em>Calories:</em> ~120 kcal (sauce + 30g lactose-free cheese) | <em>Cost:</em> ~£0.85</p>
+        
+          <p><strong>Bake Again:</strong></p>
+          <p>Return to oven and bake for another 10–15 minutes until cheese is melted and crust is crisp.</p>
+        
+          <p><strong>Serve:</strong></p>
+          <p>Garnish with fresh basil, arugula, or a drizzle of olive oil. Slice & enjoy!</p>
+          <p><em>Calories:</em> ~30 kcal (garnish + drizzle) | <em>Cost:</em> ~£0.15</p>
+        
+          <hr>
+        
+          <p><strong>🔢 Total Estimated Calories:</strong> ~370–400 kcal (per pizza)</p>
+          <p><strong>💷 Total Estimated Cost:</strong> ~<strong>£2.10</strong></p>        </div>
+        <button class="toggle-btn">Read Full Recipe</button>
+      </div>
+      <div class="recipe-card">
+        <img src="/static/pics/waffle.jpg" alt="gluten-free Recipe">
+        <h3>🧇 Gluten-Free Waffles
+        </h3>
+        <p class="preview">⏱️ Time: 20 mins
+          .</p>
+        <div class="extra-content">
+          <p>🔥 <strong>Instructions</strong></p>
+
+          <p><strong>Make the Batter:</strong></p>
+  <p>In a bowl, whisk together flour, sugar, baking powder, baking soda, and salt.</p>
+  <p>In another bowl, beat the egg, then stir in milk, oil, and vanilla.</p>
+  <p>Pour wet ingredients into dry and mix until smooth. Let sit for 5 minutes.</p>
+  <p><em>Calories:</em> ~220 kcal per waffle | <em>Cost:</em> ~£0.50 (GF flour, egg, milk, sugar, oil)</p>
+
+  <p><strong>Heat the Waffle Iron:</strong></p>
+  <p>Preheat and lightly grease your waffle iron (spray or brush with oil).</p>
+
+  <p><strong>Cook:</strong></p>
+  <p>Pour batter into the waffle maker (about 1/3 to 1/2 cup depending on size).</p>
+  <p>Cook according to your machine’s instructions — usually 3–5 mins until golden brown and crisp.</p>
+  <p><em>Calories:</em> Included above | <em>Cost:</em> —</p>
+
+  <p><strong>Serve:</strong></p>
+  <p>Top with maple syrup, berries, sliced banana, or nut butter!</p>
+  <p><em>Calories:</em> ~150–200 kcal (toppings average) | <em>Cost:</em> ~£0.80</p>
+
+  <hr>
+
+  <p><strong>🔢 Total Estimated Calories:</strong> ~370–420 kcal (per loaded waffle)</p>
+  <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£1.30</strong></p>        </div>
+        <button class="toggle-btn">Read Full Recipe</button>
+      </div>
+      <div class="recipe-card">
+        <img src="/static/pics/cupacake.jpg" alt="gluten-free Recipe">
+        <h3>🍫 Gluten-Free Chocolate Cupcakes
+        </h3>
+        <p class="preview">⏱️ Time: 30 mins
+          .</p>
+        <div class="extra-content">
+          <p>🔥 <strong>Instructions</strong></p>
+
+          <p><strong>Prep:</strong></p>
+          <p>Preheat oven to 175°C (350°F).</p>
+          <p>Line a muffin tin with 6 cupcake liners.</p>
+        
+          <p><strong>Mix Dry Ingredients:</strong></p>
+          <p>In a bowl, whisk together GF flour, cocoa powder, baking powder, baking soda, and salt.</p>
+          <p><em>Calories:</em> ~80 kcal (per cupcake portion) | <em>Cost:</em> ~£0.30</p>
+        
+          <p><strong>Mix Wet Ingredients:</strong></p>
+          <p>In another bowl, combine sugar, milk, oil, vanilla, and vinegar. Stir until well combined.</p>
+          <p><em>Calories:</em> ~100 kcal (sugar, oil, milk per cupcake) | <em>Cost:</em> ~£0.35</p>
+        
+          <p><strong>Combine:</strong></p>
+          <p>Pour wet ingredients into dry and mix until smooth (don’t overmix).</p>
+          <p>Fold in chocolate chips if using.</p>
+          <p><em>Calories:</em> ~40 kcal (with chips) | <em>Cost:</em> ~£0.20 (optional)</p>
+        
+          <p><strong>Bake:</strong></p>
+          <p>Fill cupcake liners 3/4 full.</p>
+          <p>Bake for 18–22 minutes or until a toothpick comes out clean.</p>
+        
+          <p><strong>Cool & Frost:</strong></p>
+          <p>Let cool completely before frosting.</p>
+          <p>Top with chocolate ganache, vegan buttercream, or coconut whipped cream!</p>
+          <p><em>Calories:</em> ~90 kcal (frosting average) | <em>Cost:</em> ~£0.40</p>
+        
+          <hr>
+        
+          <p><strong>🔢 Total Estimated Calories:</strong> ~310–330 kcal (per frosted cupcake)</p>
+          <p><strong>💷 Total Estimated Cost (per cupcake):</strong> ~<strong>£1.20</strong></p>       </div>
+        <button class="toggle-btn">Read Full Recipe</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="diet-category lactosefree-cards-section">
+    <h2>Lactose Free</h2>
+    <div class="cards-wrapper">
+      <div class="recipe-card">
+        <img src="/static/pics/thai.jpg" alt="lactose Recipe">
+        <h3>🍛 Red Thai Curry (Lactose-Free & Creamy)
+        </h3>
+        <p class="preview">⏱️ Time: 25–30 mins
+        </p>
+        <div class="extra-content">
+          <p>🔥 <strong>Instructions</strong></p>
+
+          <p><strong>Sauté the Curry Paste:</strong></p>
+          <p>Heat coconut oil in a pan over medium heat.</p>
+          <p>Add the red curry paste and sauté for 1–2 minutes until fragrant.</p>
+          <p><em>Calories:</em> ~70 kcal | <em>Cost:</em> ~£0.30 (1 tbsp coconut oil + 1 tbsp paste)</p>
+        
+          <p><strong>Add Coconut Milk:</strong></p>
+          <p>Pour in the full can of coconut milk and stir to combine.</p>
+          <p>Add lime leaves if using, and let it simmer for 2–3 minutes.</p>
+          <p><em>Calories:</em> ~200 kcal (full-fat can) | <em>Cost:</em> ~£1.30</p>
+        
+          <p><strong>Add Veggies & Protein:</strong></p>
+          <p>Add chopped veggies and tofu or chicken if using.</p>
+          <p>Simmer for 10–12 minutes until veggies are cooked but still bright and firm.</p>
+          <p><em>Calories:</em> ~150 kcal (mixed veg + 100g tofu/chicken) | <em>Cost:</em> ~£1.20</p>
+        
+          <p><strong>Season:</strong></p>
+          <p>Stir in soy sauce, maple syrup (or sugar), and lime juice.</p>
+          <p>Taste and adjust with salt or more curry paste if needed.</p>
+          <p><em>Calories:</em> ~40 kcal | <em>Cost:</em> ~£0.20</p>
+        
+          <p><strong>Serve:</strong></p>
+          <p>Ladle over rice or noodles.</p>
+          <p>Top with fresh basil, coriander, or chili flakes for heat.</p>
+          <p><em>Calories:</em> ~180 kcal (1 serving jasmine rice) | <em>Cost:</em> ~£0.50</p>
+        
+          <hr>
+        
+          <p><strong>🔢 Total Estimated Calories:</strong> ~640–670 kcal (per serving)</p>
+          <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£3.50</strong></p>        </div>
+        <button class="toggle-btn">Read Full Recipe</button>
+      </div>
+      <div class="recipe-card">
+        <img src="/static/pics/pizza1.jpg" alt="lactose Recipe">
+        <h3>🥓 Lactose-Free Bacon Pizza
+        </h3>
+        <p class="preview">⏱️ Time: 30–35 mins
+          .</p>
+        <div class="extra-content">
+          <p>🔥 <strong>Instructions</strong></p>
+
+          <p><strong>Make the Dough (Skip if using ready-made):</strong></p>
+  <p>Mix flour, baking powder, and salt in a bowl.</p>
+  <p>Add water and olive oil, stir, then knead until a smooth dough forms.</p>
+  <p>Roll out on a floured surface into a thin round or rectangle.</p>
+  <p><em>Calories:</em> ~220 kcal (per base portion) | <em>Cost:</em> ~£0.40</p>
+
+  <p><strong>Preheat:</strong></p>
+  <p>Preheat oven to 220°C (430°F). Line a tray with parchment paper.</p>
+
+  <p><strong>Cook the Bacon:</strong></p>
+  <p>In a pan, lightly cook the bacon until just crisp (it will finish in the oven). Cut into bite-sized pieces.</p>
+  <p><em>Calories:</em> ~120 kcal (2 rashers streaky bacon) | <em>Cost:</em> ~£0.65</p>
+
+  <p><strong>Assemble the Pizza:</strong></p>
+  <p>Spread sauce evenly over the dough.</p>
+  <p>Sprinkle lactose-free cheese all over.</p>
+  <p>Top with bacon pieces and red onion slices if using.</p>
+  <p><em>Calories:</em> ~160 kcal (sauce + 30g lactose-free cheese + onion) | <em>Cost:</em> ~£0.85</p>
+
+  <p><strong>Bake:</strong></p>
+  <p>Bake for 12–15 mins or until the crust is golden and cheese is bubbly.</p>
+
+  <p><strong>Serve:</strong></p>
+  <p>Top with fresh basil, rocket, or a sprinkle of chili flakes. Slice and enjoy hot!</p>
+  <p><em>Calories:</em> ~20 kcal (garnish + drizzle) | <em>Cost:</em> ~£0.10</p>
+
+  <hr>
+
+  <p><strong>🔢 Total Estimated Calories:</strong> ~520–550 kcal (per serving)</p>
+  <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£2.00</strong></p>        </div>
+        <button class="toggle-btn">Read Full Recipe</button>
+      </div>
+      <div class="recipe-card">
+        <img src="/static/pics/pasta.jpg" alt="lactose Recipe">
+        <h3>🍅 Lactose-Free Pomodoro Pasta
+        </h3>
+        <p class="preview">⏱️ Time: 20–25 mins
+        </p>
+        <div class="extra-content">
+          <p>🔥 <strong>Instructions</strong></p>
+
+          <p><strong>Cook the Pasta:</strong></p>
+  <p>Boil pasta in salted water until al dente. Reserve 1/4 cup pasta water before draining.</p>
+  <p><em>Calories:</em> ~210 kcal (75g dry pasta) | <em>Cost:</em> ~£0.20</p>
+
+  <p><strong>Make the Sauce:</strong></p>
+  <p>In a pan, heat olive oil over medium heat.</p>
+  <p>Add sliced garlic and sauté until fragrant but not browned (about 1 minute).</p>
+  <p>Pour in crushed tomatoes, stir, and season with salt, pepper, and a pinch of sugar.</p>
+  <p>Simmer for 10–15 minutes until slightly thickened.</p>
+  <p><em>Calories:</em> ~120 kcal (1 tbsp olive oil + 1/2 can tomatoes + garlic) | <em>Cost:</em> ~£0.55</p>
+
+  <p><strong>Finish the Dish:</strong></p>
+  <p>Add cooked pasta to the sauce. Toss well to coat. Add a splash of reserved pasta water if it needs loosening.</p>
+  <p>Tear in fresh basil and mix.</p>
+  <p><em>Calories:</em> ~10 kcal (fresh basil) | <em>Cost:</em> ~£0.10</p>
+
+  <p><strong>Serve:</strong></p>
+  <p>Plate up and top with extra basil, nutritional yeast, or dairy-free cheese if desired.</p>
+  <p><em>Calories:</em> ~60 kcal (optional topping) | <em>Cost:</em> ~£0.40</p>
+
+  <hr>
+
+  <p><strong>🔢 Total Estimated Calories:</strong> ~400–420 kcal (per serving)</p>
+  <p><strong>💷 Total Estimated Cost (per serving):</strong> ~<strong>£1.25</strong></p>        </div>
+        <button class="toggle-btn">Read Full Recipe</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section class="enquiry-section">
+    <h2>Got a Recipe or Dietary Request?</h2>
+    <p>If you want any specific recipes or have a dietary-related recipe you'd love to share, send us a message!</p>
+    
+    <form class="enquiry-form" action="#" method="post">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="topic" placeholder="What's your recipe or request?" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  <div class="divider"></div>
+    
+<footer class="footer-section">
+    <div class="footer-content animate-slide-up">
+      <div class="footer-row">
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/recipes">Recipes</a>
+          <a href="/diets">Diets</a>
+          <a href="/about">About Us</a>
+          <a href="/faqs">FAQs</a>
+        </div>
+  
+        <div class="footer-newsletter">
+          <p>Subscribe to our newsletter</p>
+          <form class="newsletter-form" action="#" method="POST">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <button type="submit">Subscribe</button>
+            <p class="form-message hidden">Thank you for your email!</p>
+          </form>
+        </div>
+  
+        <div class="footer-logo">
+          <img src="/static/pics/logo.png" alt="Foodie Logo" />
+          <div class="footer-socials">
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="footer-bottom">
+        <p>&copy; 2025 unifoodie. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>

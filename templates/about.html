@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodie | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles1.css') }}" />
+  <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="/" class="logo">
+      <img src="{{ url_for('static', filename='pics/logo.png') }}" alt="Foodie Logo" />
+    </a>
+        <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/recipes">Recipes</a>
+      <a href="/diets">Diets</a>
+      <a href="/about">About Us</a>
+      <a href="/faqs">FAQs</a>
+    </nav>
+    <div class="menu-toggle" id="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+</header>
+<section class="about-headline">
+    <h1 class="animate-fade-in">About Us</h1>
+  </section>
+  
+  <section class="about-us">
+    <div class="about-block">
+      <div class="about-img">
+        <img src="/static/pics/about1.jpg" alt="Cooking fun">
+      </div>
+      <div class="about-text animate-slide-up">
+        <h2>Our Mission</h2>
+        <h3>Bringing Flavor to UK Students Life</h3>
+        <p>At uniFoodie, we're all about making food fun, simple, and exciting for UK based university students. From quick meals to global flavors, we help you cook smart without burning your wallet—or your toast.</p>
+      </div>
+    </div>
+  
+    <div class="about-block reverse">
+      <div class="about-text animate-slide-up">
+        <h2>Who am I</h2>
+        <h3>Student. Creator. Food Lover.</h3>
+        <p>I am a student who worked as a professional chef for over 7 years since I was just 16. to mix my love for food and my passion for coding, I created this website.</p>
+      </div>
+      <div class="about-img">
+        <img src="/static/pics/about2.jpg" alt="Team vibes">
+      </div>
+    </div>
+  </section>
+  <section class="fun-facts">
+    <h2 class="section-title">Fast Foodie Facts</h2>
+    <div class="facts-container">
+      <div class="fact-card animate-slide-up">
+        <h3>2024</h3>
+        <p>Foodie was born in a tiny home kitchen by a Napier student with a single frying pan (I am lying to add dramatic effect it was two pans).</p>
+      </div>
+      <div class="fact-card animate-slide-up">
+        <h3>120</h3>
+        <p>Original recipes tested, tasted, and loved by students in the UK.</p>
+      </div>
+      <div class="fact-card animate-slide-up">
+        <h3>+10 Countries</h3>
+        <p>Our youtube channel reached student kitchens all over the world ( But we decided to focus on the UK university students).</p>
+      </div>
+      <section class="timeline-section">
+        <h2 class="section-title animate-fade-in">Our Journey</h2>
+        <div class="timeline">
+          <div class="timeline-item animate-slide-up">
+            <div class="timeline-icon">🎬</div>
+            <div class="timeline-content">
+              <h3>2020</h3>
+              <p>I began filming cooking videos in my kitchen and post it on youtube.</p>
+            </div>
+          </div>
+      
+          <div class="timeline-item animate-slide-up">
+            <div class="timeline-icon">🔥</div>
+            <div class="timeline-content">
+              <h3>2023</h3>
+              <p>started taking the videos journey seriously and posted weekly videos"</p>
+            </div>
+          </div>
+      
+          <div class="timeline-item animate-slide-up">
+            <div class="timeline-icon">🌍</div>
+            <div class="timeline-content">
+              <h3>2024</h3>
+              <p>Hit 16k followers on tiktok and spread by recipesa around the globe.</p>
+            </div>
+          </div>
+      
+          <div class="timeline-item animate-slide-up">
+            <div class="timeline-icon">🚀</div>
+            <div class="timeline-content">
+              <h3>2025</h3>
+              <p>Foodie becomes a student movement. New site, new vibe. designed to serve UK based students. Welcome aboard 😎</p>
+            </div>
+          </div>
+        </div>
+        <section class="quote-carousel-section">
+            <h2 class="section-title animate-fade-in">What People Say</h2>
+            <div class="quote-carousel">
+              <div class="quote-slide active">
+                <p>"Underrated u need more recognition."</p>
+                <span>— Mark, Student in Edinburgh</span>
+              </div>
+              <div class="quote-slide">
+                <p>"Keep it up."</p>
+                <span>— Hamo, Glasgow</span>
+              </div>
+              <div class="quote-slide">
+                <p>"The site videos are insane. Like Michelin star vibes but for broke students."</p>
+                <span>— Ellie, Edinburgh</span>
+              </div>
+          
+              <!-- Carousel dots -->
+              <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </section>
+          
+      </section>
+      
+    </div>
+  </section>
+
+  <section class="team-section">
+    <h2 class="section-title animate-fade-in">Meet the Team</h2>
+    <div class="team-container">
+      <!-- Card 1 -->
+      <div class="team-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="/static/pics/about2.jpg" alt="Chef 1">
+            <h3>Mohamed EL.</h3>
+            <p>Head of Everything</p>
+          </div>
+          <div class="card-back">
+            <p>"Add spices pls, its cheap but powerful."</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="team-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="/static/pics/about3.jpg" alt="Chef 2">
+            <h3>Ahmed S.</h3>
+            <p>Youtube editor</p>
+          </div>
+          <div class="card-back">
+            <p>"If it ain’t cinematic, it ain’t on the plate."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer-section">
+    <div class="footer-content animate-slide-up">
+      <div class="footer-row">
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/recipes">Recipes</a>
+          <a href="/diets">Diets</a>
+          <a href="/about">About Us</a>
+          <a href="/faqs">FAQs</a>
+        </div>
+  
+        <div class="footer-newsletter">
+          <p>Subscribe to our newsletter</p>
+          <form class="newsletter-form" action="#" method="POST">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <button type="submit">Subscribe</button>
+            <p class="form-message hidden">Thank you for your email!</p>
+          </form>
+        </div>
+  
+        <div class="footer-logo">
+          <img src="/static/pics/logo.png" alt="Foodie Logo" />
+          <div class="footer-socials">
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="footer-bottom">
+        <p>&copy; 2025 unifoodie. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodie | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="/" class="logo">
+      <img src="{{ url_for('static', filename='pics/logo.png') }}" alt="Foodie Logo" />
+    </a>
+        <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/recipes">Recipes</a>
+      <a href="/diets">Diets</a>
+      <a href="/about">About Us</a>
+      <a href="/faqs">FAQs</a>
+    </nav>
+    <div class="menu-toggle" id="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+  </header>
+  <section class="light-hero">
+    <div class="hero-text animate-slide-up">
+      <h1>Provide the <span>best food</span> for UNI students</h1>
+      <p>We provide the best and most delicious food based on high quality ingredients maintained by high tech machines and cooked by our experts.</p>
+      
+  </div>
+
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-item back-blur">
+          <img src="/static/pics/food2.png" alt="Food 1">
+        </div>
+        <div class="carousel-item back">
+          <img src="/static/pics/food3.png" alt="Food 2">
+        </div>
+        <div class="carousel-item front">
+          <img src="/static/pics/food4.png" alt="Food 3">
+        </div>
+        <div class="carousel-item back">
+          <img src="/static/pics/food1.png" alt="Food 4">
+        </div>
+        <div class="carousel-item back-blur">
+          <img src="/static/pics/food5.png" alt="Food 5">
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button id="prevBtn">&#10094;</button>
+        <button id="nextBtn">&#10095;</button>
+      </div>
+    </div>
+    
+  </section>
+  
+
+  <section class="welcome-section">
+    
+    <div class="welcome-content animate-fade-in">
+      <h2>Welcome to uniFoodie 🍽️</h2>
+      <h3>Hi, we created this website to support UK based students in order to help you eat better and save money.</h3>
+      <p>
+         Your one-stop destination for simple, healthy, and downright delicious meals. Whether you're vegan, halal, or just hungry — we’ve got a recipe and tutorials for you.
+      </p>
+      <p>
+        Discover meals that match your lifestyle and cravings while keeping it healthy and on budget. Learn new cooking techniques, master meal prep, and eat like a chef at your student dorm. It's more than food — it's unifoodie.
+      </p>
+       <a href="{{ url_for('recipes') }}" class="btn big-btn animate-bounce">🔍 Search Recipes</a>
+
+    </div>
+  
+    <div class="welcome-image animate-slide-in">
+      <h2 class="image-heading">WELCOME</h2>
+      <img src="/static/pics/tira.jpg" alt="Fresh healthy food" />
+    </div>
+  </section>
+  
+  </section>
+  
+  <section class="latest-recipes-section">
+    <h2 class="section-title animate-slide-up">Latest Recipes</h2>
+    <div class="recipe-grid">
+     
+      <div class="recipe-card animate-fade-in">
+        <div class="card-image">
+          <img src="/static/pics/recipe1.jpg" alt="Tiramisu" />
+        </div>
+        <div class="card-content">
+          <h3>Tiramisu</h3>
+          <a href="{{ url_for('recipes') }}" class="btn small-btn">View Recipe</a>
+        </div>
+      </div>
+  
+      <div class="recipe-card animate-fade-in">
+        <div class="card-image">
+          <img src="/static/pics/panna.jpg" alt="Avocado Toast" />
+        </div>
+        <div class="card-content">
+          <h3>🍮 Panna Cotta with Raspberry Sauce</h3>
+          <a href="{{ url_for('recipes') }}" class="btn small-btn">View Recipe</a>
+        </div>
+      </div>
+  
+      <div class="recipe-card animate-fade-in">
+        <div class="card-image">
+          <img src="/static/pics/recipe3.jpg" alt="Vegan Bowl" />
+        </div>
+        <div class="card-content">
+          <h3>Vegan Power Bowl</h3>
+          <a href="{{ url_for('diets') }}" class="btn small-btn">View Recipe</a>
+        </div>
+      </div>
+  
+      <div class="recipe-card animate-fade-in">
+        <div class="card-image">
+          <img src="/static/pics/recipe4.jpg" alt="Chicken Curry" />
+        </div>
+        <div class="card-content">
+          <h3>Chicken Curry</h3>
+          <a href="{{ url_for('recipes') }}" class="btn small-btn">View Recipe</a>
+        </div>
+      </div>
+  
+      <div class="recipe-card animate-fade-in">
+        <div class="card-image">
+          <img src="/static/pics/france.jpg" alt="Berry Smoothie" />
+        </div>
+        <div class="card-content">
+          <h3>🥪 Croque Monsieur</h3>
+          <a href="{{ url_for('recipes') }}" class="btn small-btn">View Recipe</a>
+        </div>
+      </div>
+  
+      <div class="recipe-card animate-fade-in">
+        <div class="card-image">
+          <img src="/static/pics/steak.jpg" alt="Keto Omelette" />
+        </div>
+        <div class="card-content">
+          <h3>🥩 Salt & Pepper Basted Steak</h3>
+          <a href="{{ url_for('recipes') }}" class="btn small-btn">View Recipe</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="counter-section">
+    <div class="counter-overlay">
+      <div class="counter-wrapper">
+        <div class="counter-box animate-slide-up">
+          <h3 class="counter-number" data-target="120&plus;">0</h3> 
+          <p>Recipes</p>
+        </div>
+        <div class="counter-box animate-slide-up">
+          <h3 class="counter-number" data-target="120&plus;">0</h3>
+          <p>Videos</p>
+        </div>
+        <div class="counter-box animate-slide-up">
+          <h3 class="counter-number" data-target="1900&plus;">0</h3>
+          <p>Chef's YouTube Subscribers</p>
+        </div>
+        <div class="counter-box animate-slide-up">
+          <h3 class="counter-number" data-target="16500&plus;">0</h3>
+          <p>Chef's Tiktok Subscribers</p>
+        </div>
+        <div class="counter-box animate-slide-up">
+          <h3 class="counter-number" data-target="1000000&plus;">0</h3>
+          <p>Youtube Views</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="resources-section">
+    <h2 class="section-title animate-slide-up">COOKING LEVELS</h2>
+    <p class="section-subtitle animate-fade-in">
+      Improve your cooking skills — whether you're a total beginner or ready to master chef-level techniques.
+    </p>
+  
+    <div class="resource-cards">
+      
+      <div class="resource-card animate-slide-up">
+        <div class="level-badge">1</div>
+        <h3>Beginner</h3>
+        <h4>Getting Started</h4>
+        <p>New to cooking? We've got beginner-friendly, step-by-step tutorials to help you build confidence and learn the basics.</p>
+        <img src="/static/pics/beginner.jpg" alt="Beginner cooking" />
+        <a href="{{ url_for('recipes') }}" class="btn small-btn">Explore</a>
+      </div>
+  
+      
+      <div class="resource-card animate-slide-up">
+        <div class="level-badge">2</div>
+        <h3>Intermediate</h3>
+        <h4>Level Up</h4>
+        <p>Expand your skills with intermediate recipes that introduce new techniques, flavors, and more creative plating.</p>
+        <img src="/static/pics/intermediate.jpg" alt="Intermediate cooking" />
+        <a href="{{ url_for('recipes') }}" class="btn small-btn">Explore</a>
+      </div>
+  
+      
+      <div class="resource-card animate-slide-up">
+        <div class="level-badge">3</div>
+        <h3>Advanced</h3>
+        <h4>Master the Craft</h4>
+        <p>Challenge yourself with complex dishes, gourmet techniques, and recipes worthy of professional chefs.</p>
+        <img src="/static/pics/advanced.jpg" alt="Advanced cooking" />
+        <a href="{{ url_for('recipes') }}" class="btn small-btn">Explore</a>
+      </div>
+    </div>
+  </section>
+  
+  <section class="badge-section">
+    <h2 class="badge-title">Earn Achievements!</h2>
+    <div class="badge-container">
+      <div class="badge-card">
+        <img src="/static/pics/bronze.png" alt="Bronze Badge" class="badge-img" />
+        <h3 class="badge-text">Complete 3 recipes a week</h3>
+      </div>
+      <div class="badge-card">
+        <img src="/static/pics/silver.png" alt="Silver Badge" class="badge-img" />
+        <h3 class="badge-text">Complete 5 recipes a week</h3>
+      </div>
+      <div class="badge-card">
+        <img src="/static/pics/gold.png" alt="Gold Badge" class="badge-img" />
+        <h3 class="badge-text">Complete 7 recipes a week</h3>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <section class="contact-section">
+    <h2 class="section-title animate-slide-up">Contact Me</h2>
+    <p class="section-subtitle animate-fade-in">
+      Have a question, recipe idea, or just want to say hello? Reach out below!
+    </p>
+  
+    <form class="contact-form animate-slide-up" action="#" method="POST">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Your Name" required />
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Your Email" required />
+      </div>
+      <div class="form-group">
+        <input type="tel" name="phone" placeholder="Phone Number" />
+      </div>
+      <div class="form-group">
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit" class="btn submit-btn">Send Message</button>
+      <p class="form-message hidden">Thank you for your email!</p>
+    </form>
+    
+  </section>
+  
+  <footer class="footer-section">
+    <div class="footer-content animate-slide-up">
+      <div class="footer-row">
+        
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/recipes">Recipes</a>
+          <a href="/diets">Diets</a>
+          <a href="/about">About Us</a>
+          <a href="/faqs">FAQs</a>
+        </div>
+  
+        
+        <div class="footer-newsletter">
+          <p>Subscribe to our newsletter</p>
+          <form class="newsletter-form" action="#" method="POST">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <button type="submit">Subscribe</button>
+            <p class="form-message hidden">Thank you for your email!</p>
+          </form>
+        </div>
+  
+        
+        <div class="footer-logo">
+          <img src="/static/pics/logo.png" alt="Foodie Logo" />
+          <div class="footer-socials">
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+  
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 unifoodie. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>

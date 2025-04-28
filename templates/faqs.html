@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodie | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles1.css') }}" />
+  <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="/" class="logo">
+      <img src="{{ url_for('static', filename='pics/logo.png') }}" alt="Foodie Logo" />
+    </a>
+        <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/recipes">Recipes</a>
+      <a href="/diets">Diets</a>
+      <a href="/about">About Us</a>
+      <a href="/faqs">FAQs</a>
+    </nav>
+    <div class="menu-toggle" id="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+</header>
+<section class="about-headline">
+    <h1 class="animate-fade-in">FAQs</h1>
+  </section>
+  <section class="faq-section">
+    <h2 class="section-title animate-fade-in">Frequently Asked Questions</h2>
+    <div class="faq-container">
+  
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>🍽️ What kind of recipes do you post?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>We focus on student-friendly recipes: budget-friendly, quick, and globally inspired. Think ramen meets tahini tacos.</p>
+        </div>
+      </div>
+  
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>⏱️ How long do the recipes usually take?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Most take under 30 minutes. Unless you're baking — then all bets are off 🍞.</p>
+        </div>
+      </div>
+  
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>🧑‍💻 Can I suggest a recipe?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Absolutely. Drop us a DM or hit up the contact form. If it slaps, we’ll test it and post it with credits!</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>🍽️ What kind of recipes do you post?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>We focus on student-friendly recipes: budget-friendly, quick, and globally inspired. Think ramen meets tahini tacos.</p>
+        </div>
+      </div>
+        <div class="faq-item">
+        <button class="faq-question">
+          <span>⏱️ How long do the recipes usually take?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Most take under 30 minutes. Unless you're baking — then all bets are off 🍞.</p>
+        </div>
+      </div>
+  
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>🧑‍💻 Can I suggest a recipe?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Absolutely. Drop us a DM or hit up the contact form. If it slaps, we’ll test it and post it with credits!</p>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="faq-helper animate-slide-up">
+        <p>Still stuck or got a weird question?</p>
+        <button class="help-btn" id="open-chat">Ask a human 👨‍🍳</button>
+      </div>
+    </section>
+    
+    <!-- Chat Box -->
+    <div class="chat-popup" id="chat-box">
+      <div class="chat-header">
+        <span>Live Chef Chat</span>
+        <button id="close-chat">&times;</button>
+      </div>
+      <div class="chat-body">
+        <p><strong>👨‍🍳 ChefBot:</strong> Hey there! What’s cooking on your mind?</p>
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Type your question..." />
+        <button>Send</button>
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- CONTACT FORM FINAL -->
+<section class="contact-section-final animate-slide-up">
+    <h2 class="section-title">Hate live chat? No worries — just drop us a DM 💌</h2>
+  
+    <form class="contact-final-form">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="e.g. Gordon Ramsay" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" placeholder="e.g. chef@email.com" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" rows="5" placeholder="Tell us what’s on your mind..." required></textarea>
+      </div>
+  
+      <button type="submit" class="submit-final-btn">Send Message</button>
+      <p class="form-message hidden">Thanks for your message! We'll get back to you soon.</p>
+    </form>
+  </section>
+  <div class="divider"></div>
+
+  <footer class="footer-section">
+    <div class="footer-content animate-slide-up">
+      <div class="footer-row">
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/recipes">Recipes</a>
+          <a href="/diets">Diets</a>
+          <a href="/about">About Us</a>
+          <a href="/faqs">FAQs</a>
+        </div>
+  
+        <div class="footer-newsletter">
+          <p>Subscribe to our newsletter</p>
+          <form class="newsletter-form" action="#" method="POST">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <button type="submit">Subscribe</button>
+            <p class="form-message hidden">Thank you for your email!</p>
+          </form>
+        </div>
+  
+        <div class="footer-logo">
+          <img src="/static/pics/logo.png" alt="Foodie Logo" />
+          <div class="footer-socials">
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="footer-bottom">
+        <p>&copy; 2025 unifoodie. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
