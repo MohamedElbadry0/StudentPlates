@@ -1,12 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // === Mobile Navigation Toggle ===
-  const menuButton = document.getElementById("mobile-menu");
-  const navigationLinks = document.getElementById("nav-links");
-
-  if (menuButton && navigationLinks) {
-    menuButton.addEventListener("click", () => {
-      navigationLinks.classList.toggle("active");
-      menuButton.classList.toggle("open");
+  // === Mobile Menu ===
+  const menuToggle = document.getElementById("mobile-menu");
+  const navLinks = document.querySelector(".nav-links");
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
     });
   }
 
