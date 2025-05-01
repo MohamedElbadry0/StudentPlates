@@ -7,6 +7,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
   <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
+
 </head>
 <body>
   <header class="navbar">
@@ -177,46 +180,6 @@
     </div>
   </section>
   
-
-  <section class="resources-section">
-    <h2 class="section-title animate-slide-up">COOKING LEVELS</h2>
-    <p class="section-subtitle animate-fade-in">
-      Improve your cooking skills — whether you're a total beginner or ready to master chef-level techniques.
-    </p>
-  
-    <div class="resource-cards">
-      
-      <div class="resource-card animate-slide-up">
-        <div class="level-badge">1</div>
-        <h3>Beginner</h3>
-        <h4>Getting Started</h4>
-        <p>New to cooking? We've got beginner-friendly, step-by-step tutorials to help you build confidence and learn the basics.</p>
-        <img src="/static/pics/beginner.jpg" alt="Beginner cooking" />
-        <a href="{{ url_for('recipes') }}" class="btn small-btn">Explore</a>
-      </div>
-  
-      
-      <div class="resource-card animate-slide-up">
-        <div class="level-badge">2</div>
-        <h3>Intermediate</h3>
-        <h4>Level Up</h4>
-        <p>Expand your skills with intermediate recipes that introduce new techniques, flavors, and more creative plating.</p>
-        <img src="/static/pics/intermediate.jpg" alt="Intermediate cooking" />
-        <a href="{{ url_for('recipes') }}" class="btn small-btn">Explore</a>
-      </div>
-  
-      
-      <div class="resource-card animate-slide-up">
-        <div class="level-badge">3</div>
-        <h3>Advanced</h3>
-        <h4>Master the Craft</h4>
-        <p>Challenge yourself with complex dishes, gourmet techniques, and recipes worthy of professional chefs.</p>
-        <img src="/static/pics/advanced.jpg" alt="Advanced cooking" />
-        <a href="{{ url_for('recipes') }}" class="btn small-btn">Explore</a>
-      </div>
-    </div>
-  </section>
-  
   <section class="badge-section">
     <h2 class="badge-title">Earn Achievements!</h2>
     <div class="badge-container">
@@ -235,7 +198,19 @@
     </div>
   </section>
   
-
+  <section class="food-wheel">
+    <div class="fw-wrapper animate-fadein">
+      <h2>🎡 Wanna play? <span class="fw-highlight">Spin the Wheel and cook and random dish!</span>!</h2>
+      <div class="fw-container">
+        <canvas id="foodWheel"></canvas>
+        <img src="/static/pics/arrow.png" alt="Arrow" />
+        <button id="spin-food-btn">🍴 Spin</button>
+      </div>
+      <div id="food-result">
+        <p>Tap the wheel to get a random dish!</p>
+      </div>
+    </div>
+  </section>
 
   <section class="contact-section">
     <h2 class="section-title animate-slide-up">Contact Me</h2>

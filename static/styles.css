@@ -1067,5 +1067,101 @@ body {
   }
 }
 
+/* wheel */
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: rgb(255, 247, 240);
+  color: #2e2e2e;
+  margin: 0;
+  padding: 0;
+}
 
+.food-wheel {
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.fw-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgb(255, 247, 240);
+  padding: 1em 1.5em;
+  border-radius: 1em;
+  animation: fadein 1s ease-in;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.fw-highlight {
+  font-weight: 700;
+}
+
+.fw-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+canvas#foodWheel {
+  width: 100% !important;
+  max-width: 400px;
+  height: auto !important;
+  margin-top: 0.4em; 
+}
+
+#spin-food-btn {
+  margin-top: 12px; 
+  padding: 10px;
+  font-size: 1.1rem;
+  background: radial-gradient(#ffbe0b 20%, #fb5607 80%);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+#spin-food-btn:hover {
+  transform: scale(1.05);
+}
+
+.fw-container img {
+  position: absolute;
+  top: 42%;
+  right: 12%;
+  width: 2.5em;
+  transform: rotate(-90deg);
+}
+
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadein {
+  animation: fadein 1s ease;
+}
+
+@media screen and (max-width: 600px) {
+  .fw-wrapper {
+    padding: 1.2em 1em;
+  }
+
+  #spin-food-btn {
+    width: 65px;
+    height: 65px;
+    font-size: 1rem;
+  }
+
+  .fw-container img {
+    right: -6%;
+    width: 2em;
+  }
+
+
+}
 
