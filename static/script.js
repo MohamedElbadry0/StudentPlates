@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 400);
   }
 
-  // === Highlight Paragraphs in Hero on Scroll ===
+  // === Highlight Paragraphs in Hero when Scroll ===
   document.querySelectorAll(".hero-content p").forEach(paragraph => {
     const paragraphObserver = new IntersectionObserver(
       entries => {
