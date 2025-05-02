@@ -236,17 +236,8 @@ const wheelCanvas = document.getElementById("foodWheel");
 const spinBtn = document.getElementById("spin-food-btn");
 const resultText = document.getElementById("food-result");
 
-const segments = [
-  "pasta 🍝",
-  "Tacos 🌮",
-  "Ramen 🍜",
-  "Salad 🥗",
-  "Curry 🍛",
-  "Burgers 🍔"
-];
-
-const segmentDegrees = 360 / segments.length; 
-
+const segments = ["Pasta 🍝", "Tacos 🌮", "Ramen 🍜", "Salad 🥗", "Curry 🍛", "Burgers 🍔"];
+const segmentDegrees = 360 / segments.length;
 const pieColors = ["#F94144", "#F3722C", "#F8961E", "#F9C74F", "#90BE6D", "#43AA8B"];
 
 let foodWheelChart = new Chart(wheelCanvas, {
@@ -289,40 +280,41 @@ function getResultFromAngle(angle) {
   return segments[index];
 }
 
-let totalRotation = 0;
-let count = 0;
-let resultValue = 80;
+function spinWheel() {
+  let totalRotation = 0;
+  const spins = 6; // how many full spins
+  const randomOffset = Math.floor(Math.random() * 360);
+  const targetRotation = 360 * spins + randomOffset;
+
+  let start = null;
+
+  function animate(timestamp) {
+    if (!start) start = timestamp;
+    const elapsed = timestamp - start;
+
+    // Ease out rotation using a simple timing function
+    const progress = Math.min(elapsed / 3000, 1); // 3s duration
+    const eased = 1 - Math.pow(1 - progress, 3);  // easeOutCubic
+
+    const currentRotation = targetRotation * eased;
+    foodWheelChart.options.rotation = currentRotation % 360;
+    foodWheelChart.update();
+
+    if (progress < 1) {
+      requestAnimationFrame(animate);
+    } else {
+      const finalAngle = currentRotation % 360;
+      const result = getResultFromAngle(finalAngle);
+      resultText.style.opacity = 1;
+      spinBtn.disabled = false;
+    }
+  }
+
+  requestAnimationFrame(animate);
+}
 
 spinBtn.addEventListener("click", () => {
   spinBtn.disabled = true;
-  resultText.innerHTML = `<p>Spinning... 🔄</p>`;
   resultText.style.opacity = 0;
-
-  const extraRotation = Math.floor(Math.random() * 360);
-  totalRotation = 0;
-
-  const spinInterval = setInterval(() => {
-    totalRotation += resultValue;
-    foodWheelChart.options.rotation = totalRotation % 360;
-    foodWheelChart.update();
-
-    if (totalRotation >= 360) {
-      count++;
-      resultValue = Math.max(resultValue - 3, 1);
-      totalRotation = totalRotation % 360;
-    }
-
-    if (count > 12 && resultValue === 1) {
-      clearInterval(spinInterval);
-
-      const finalAngle = (totalRotation + extraRotation) % 360;
-      foodWheelChart.options.rotation = finalAngle;
-      foodWheelChart.update();
-
-
-      spinBtn.disabled = false;
-      count = 0;
-      resultValue = 80;
-    }
-  }, 12);
+  spinWheel();
 });
